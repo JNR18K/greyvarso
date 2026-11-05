@@ -100,7 +100,7 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(S));$("#saved").text
 /* ---------- calculs ---------- */
 function calcM(m){
   const sale_d=m.dr.reduce((a,r)=>a+num(r.montant),0), q_d=m.dr.reduce((a,r)=>a+num(r.qte),0);
-  const sale_a=m.ac.reduce((a,r)=>a+num(r.montant),0), q_a=m.ac.reduce((a,r)=>a+num(r.qte),0);
+  const sale_a=m.ac.reduce((a,r)=>a+num(r.montant),0), q_a=m.ac.length;
   const part=m.ac.reduce((a,r)=>{const x=num(r.montant);return a+x*((x>=S.p.seuil?S.p.pMax:S.p.pMin)/100)},0);
   const gd=Math.floor(q_d/100)*S.p.d100;
   const labs=S.lab.filter(r=>r.membre===m.nom).reduce((a,r)=>a+num(r.labos),0);
@@ -134,7 +134,7 @@ function memberOpts(){return S.m.map(m=>m.nom)}
 const now=()=>{const d=new Date();const p=n=>String(n).padStart(2,"0");return `${p(d.getDate())}/${p(d.getMonth()+1)} ${p(d.getHours())}:${p(d.getMinutes())}`};
 
 /* ---------- vues ---------- */
-const TABS=[["stats","Stats"],["fiches","Fiches"],["fleeca","Fleeca / Armurerie"],["labo","Laboratoire"],["rec","Récoltes"],["sal","Salaires"],["admin","Admin"]];
+const TABS=[["stats","Stats"],["fiches","Fiches"],["fleeca","Fleeca / Armurerie"],["labo","Laboratoire"],["rec","Récoltes"],["sal","Salaires"],["admin","🔒 Admin"]];
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>`<button data-tab="${k}" class="${k===tab?"on":""}">${l}</button>`).join("");
 }
@@ -146,7 +146,7 @@ function vStats(){
   const rows=S.m.map((m,i)=>`<tr><td>${esc(m.nom)}</td><td class="n">${c[i].q_d}</td><td class="n">${c[i].q_a}</td><td class="n">${c[i].labs}</td><td class="n">${fmt(c[i].sale)}</td><td>${c[i].ok?"✅":"❌"}</td></tr>`).join("");
   const acts=ACTS.map(a=>{
     const all=S.m.flatMap(m=>m.ac.filter(r=>r.action===a));
-    return `<tr><td>${a}</td><td class="n">${fmt(all.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${all.reduce((s,r)=>s+num(r.qte),0)}</td></tr>`}).join("");
+    return `<tr><td>${a}</td><td class="n">${fmt(all.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${all.length}</td></tr>`}).join("");
   const fiches=T("sale"), caisse=fiches+flTot();
   return `
   <div class="card"><h2>Semaine</h2><div class="row2" style="max-width:520px">
@@ -176,16 +176,16 @@ function vFiches(){
   const m=S.m[sel], c=calcM(m), i=sel;
   const chips=S.m.map((x,k)=>`<button class="chip ${k===sel?"on":""}" data-sel="${k}">${esc(x.nom)}</button>`).join("");
   const drRows=m.dr.map((r,k)=>`<tr><td>${inp(`m.${i}.dr.${k}.date`,"d")}</td><td>${sel_(`m.${i}.dr.${k}.drogue`,DRUGS)}</td><td>${inp(`m.${i}.dr.${k}.qte`,"n")}</td><td>${inp(`m.${i}.dr.${k}.montant`,"n")}</td><td>${inp(`m.${i}.dr.${k}.valide`,"c")}</td><td><button class="del" data-del="m.${i}.dr.${k}">✕</button></td></tr>`).join("");
-  const acRows=m.ac.map((r,k)=>`<tr><td>${inp(`m.${i}.ac.${k}.date`,"d")}</td><td>${sel_(`m.${i}.ac.${k}.action`,ACTS)}</td><td>${inp(`m.${i}.ac.${k}.qte`,"n")}</td><td>${inp(`m.${i}.ac.${k}.montant`,"n")}</td><td>${inp(`m.${i}.ac.${k}.valide`,"c")}</td><td><button class="del" data-del="m.${i}.ac.${k}">✕</button></td></tr>`).join("");
+  const acRows=m.ac.map((r,k)=>`<tr><td>${inp(`m.${i}.ac.${k}.date`,"d")}</td><td>${sel_(`m.${i}.ac.${k}.action`,ACTS)}</td><td class="n">1</td><td>${inp(`m.${i}.ac.${k}.montant`,"n")}</td><td>${inp(`m.${i}.ac.${k}.valide`,"c")}</td><td><button class="del" data-del="m.${i}.ac.${k}">✕</button></td></tr>`).join("");
   const dT=DRUGS.map(d=>{const rr=m.dr.filter(r=>r.drogue===d);return `<tr><td>${d}</td><td class="n">${fmt(rr.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${rr.reduce((s,r)=>s+num(r.qte),0)}</td></tr>`}).join("");
-  const aT=ACTS.map(d=>{const rr=m.ac.filter(r=>r.action===d);return `<tr><td>${d}</td><td class="n">${fmt(rr.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${rr.reduce((s,r)=>s+num(r.qte),0)}</td></tr>`}).join("");
+  const aT=ACTS.map(d=>{const rr=m.ac.filter(r=>r.action===d);return `<tr><td>${d}</td><td class="n">${fmt(rr.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${rr.length}</td></tr>`}).join("");
   const q=(a,b,t)=>`<tr><td>${t}</td><td class="n">${a} / ${b}</td><td>${a>=b?"✅":"❌"}</td></tr>`;
   return `<div class="chips">${chips}</div>
   <div class="card"><h2>${esc(m.nom)} — ${esc(m.grade||"Membre")}</h2>
    <div class="row2">
     <label class="f">Nom${inp(`m.${i}.nom`,"s")}</label><label class="f">Grade${inp(`m.${i}.grade`,"s")}</label>
-    <label class="f">Argent propre ($)${inp(`m.${i}.propre`,"n")}</label><label class="f">Argent dépensé ($)${inp(`m.${i}.depense`,"n")}</label></div>
-   <div class="grid g3" style="margin-top:14px">${kpi("Argent sale",fmt(c.sale),"bad")}${kpi("Argent propre",fmt(num(m.propre)))}${kpi("Argent dépensé",fmt(num(m.depense)))}</div></div>
+    <label class="f">Téléphone${inp(`m.${i}.tel`,"s")}</label><label class="f">RIB${inp(`m.${i}.rib`,"s")}</label><label class="f">ID unique${inp(`m.${i}.id`,"s")}</label></div>
+   <div style="margin-top:14px">${kpi("Argent sale",fmt(c.sale),"bad")}</div></div>
   <div class="grid g2">
    <div class="card"><h2>Vente de drogue</h2><div class="wrap"><table>
      <tr><th>Date / Heure</th><th>Drogue</th><th class="n">Quantité</th><th class="n">Montant</th><th>Validé</th><th></th></tr>${drRows}</table></div>
@@ -280,7 +280,19 @@ function vAdmin(){
   <div class="card"><h2>Sauvegarde</h2><p class="note">Les données sont enregistrées dans ce navigateur, sur cet appareil. Utilise « Exporter » pour garder une copie et « Importer » pour la remettre ailleurs.</p></div>`;
 }
 
-const VIEWS={stats:vStats,fiches:vFiches,fleeca:vFleeca,labo:vLabo,rec:vRec,sal:vSal,admin:vAdmin};
+function cyrb53(str,seed=0){let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677);}h1=Math.imul(h1^(h1>>>16),2246822507);h1^=Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507);h2^=Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)}
+const ADMIN_HASH=4442493394655713;
+let unlocked=false;try{unlocked=sessionStorage.getItem("gv-admin")==="1"}catch(e){}
+function tryUnlock(){
+  const v=($("#pin")||{}).value||"";
+  if(cyrb53("greyvarso:"+v.trim().toLowerCase())===ADMIN_HASH){unlocked=true;try{sessionStorage.setItem("gv-admin","1")}catch(e){}render()}
+  else{const m=$("#pinmsg");if(m)m.textContent="Code incorrect"}
+}
+function vLock(){return `<div class="card" style="max-width:420px;margin:40px auto"><h2>🔒 Zone admin</h2><p class="note">Accès réservé. Entre le code admin.</p>
+  <input id="pin" type="password" placeholder="Code admin" autocomplete="off"><p id="pinmsg" class="bad"></p>
+  <button class="btn red" data-unlock="1">Déverrouiller</button></div>`}
+function vAdminGate(){return unlocked?`<p><button class="btn" data-lock="1">🔒 Verrouiller l'admin</button></p>`+vAdmin():vLock()}
+const VIEWS={stats:vStats,fiches:vFiches,fleeca:vFleeca,labo:vLabo,rec:vRec,sal:vSal,admin:vAdminGate};
 function refresh(){
   const m=$("#main"),tmp=document.createElement("div");
   tmp.innerHTML=VIEWS[tab]();
@@ -301,6 +313,8 @@ function render(){renderNav();$("#main").innerHTML=VIEWS[tab]()}
 /* ---------- événements ---------- */
 document.addEventListener("click",e=>{
   const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.unlock){tryUnlock();return}
+  if(t.dataset.lock){unlocked=false;try{sessionStorage.removeItem("gv-admin")}catch(e){}render();return}
   if(t.dataset.tab){tab=t.dataset.tab;render();return}
   if(t.dataset.sel!==undefined){sel=+t.dataset.sel;render();return}
   if(t.dataset.add){
@@ -315,6 +329,7 @@ document.addEventListener("click",e=>{
     const k=t.dataset.del.split(".");const idx=+k.pop();const arr=k.reduce((o,x)=>o[x],S);
     arr.splice(idx,1);save();render();return}
 });
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.id==="pin")tryUnlock()});
 document.addEventListener("input",e=>{
   const el=e.target;if(!el.dataset.b)return;
   const v=el.dataset.t==="c"?el.checked:el.dataset.t==="n"?(el.value===""?"":parseFloat(el.value)):el.value;
