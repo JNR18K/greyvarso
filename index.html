@@ -134,7 +134,7 @@ function memberOpts(){return S.m.map(m=>m.nom)}
 const now=()=>{const d=new Date();const p=n=>String(n).padStart(2,"0");return `${p(d.getDate())}/${p(d.getMonth()+1)} ${p(d.getHours())}:${p(d.getMinutes())}`};
 
 /* ---------- vues ---------- */
-const TABS=[["stats","Stats"],["fiches","Fiches"],["fleeca","Fleeca / Armurerie"],["labo","Laboratoire"],["rec","Récoltes"],["sal","Salaires"],["admin","🔒 Admin"]];
+const TABS=[["stats","Stats"],["fiches","Fiches"],["fleeca","Fleeca / Armurerie"],["labo","Laboratoire"],["rec","Récoltes"],["sal","🔒 Salaires"],["admin","🔒 Admin"]];
 function renderNav(){
   $("#nav").innerHTML=TABS.map(([k,l])=>`<button data-tab="${k}" class="${k===tab?"on":""}">${l}</button>`).join("");
 }
@@ -281,18 +281,19 @@ function vAdmin(){
 }
 
 function cyrb53(str,seed=0){let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677);}h1=Math.imul(h1^(h1>>>16),2246822507);h1^=Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507);h2^=Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)}
-const ADMIN_HASH=4442493394655713;
-let unlocked=false;try{unlocked=sessionStorage.getItem("gv-admin")==="1"}catch(e){}
+const LOCKS={admin:{hash:4442493394655713,title:"Zone admin",txt:"Entre le code admin."},sal:{hash:6103164355567970,title:"Fiche salaires",txt:"Entre le code des salaires."}};
+const UNL={};
+try{Object.keys(LOCKS).forEach(k=>UNL[k]=sessionStorage.getItem("gv-"+k)==="1")}catch(e){}
 function tryUnlock(){
   const v=($("#pin")||{}).value||"";
-  if(cyrb53("greyvarso:"+v.trim().toLowerCase())===ADMIN_HASH){unlocked=true;try{sessionStorage.setItem("gv-admin","1")}catch(e){}render()}
+  if(cyrb53("greyvarso:"+v.trim().toLowerCase())===LOCKS[tab].hash){UNL[tab]=true;try{sessionStorage.setItem("gv-"+tab,"1")}catch(e){}render()}
   else{const m=$("#pinmsg");if(m)m.textContent="Code incorrect"}
 }
-function vLock(){return `<div class="card" style="max-width:420px;margin:40px auto"><h2>🔒 Zone admin</h2><p class="note">Accès réservé. Entre le code admin.</p>
-  <input id="pin" type="password" placeholder="Code admin" autocomplete="off"><p id="pinmsg" class="bad"></p>
+function vLock(){const L=LOCKS[tab];return `<div class="card" style="max-width:420px;margin:40px auto"><h2>🔒 ${L.title}</h2><p class="note">Accès réservé. ${L.txt}</p>
+  <input id="pin" type="password" placeholder="Code" autocomplete="off"><p id="pinmsg" class="bad"></p>
   <button class="btn red" data-unlock="1">Déverrouiller</button></div>`}
-function vAdminGate(){return unlocked?`<p><button class="btn" data-lock="1">🔒 Verrouiller l'admin</button></p>`+vAdmin():vLock()}
-const VIEWS={stats:vStats,fiches:vFiches,fleeca:vFleeca,labo:vLabo,rec:vRec,sal:vSal,admin:vAdminGate};
+function gate(f){return ()=>UNL[tab]?`<p><button class="btn" data-lock="1">🔒 Verrouiller</button></p>`+f():vLock()}
+const VIEWS={stats:vStats,fiches:vFiches,fleeca:vFleeca,labo:vLabo,rec:vRec,sal:gate(vSal),admin:gate(vAdmin)};
 function refresh(){
   const m=$("#main"),tmp=document.createElement("div");
   tmp.innerHTML=VIEWS[tab]();
@@ -314,7 +315,7 @@ function render(){renderNav();$("#main").innerHTML=VIEWS[tab]()}
 document.addEventListener("click",e=>{
   const t=e.target.closest("button");if(!t)return;
   if(t.dataset.unlock){tryUnlock();return}
-  if(t.dataset.lock){unlocked=false;try{sessionStorage.removeItem("gv-admin")}catch(e){}render();return}
+  if(t.dataset.lock){UNL[tab]=false;try{sessionStorage.removeItem("gv-"+tab)}catch(e){}render();return}
   if(t.dataset.tab){tab=t.dataset.tab;render();return}
   if(t.dataset.sel!==undefined){sel=+t.dataset.sel;render();return}
   if(t.dataset.add){
