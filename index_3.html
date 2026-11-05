@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grey Varso — Gestion</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#121214;--panel:#1b1b1f;--panel2:#232328;--ink:#ededf0;--muted:#a0a0a9;--line:#35353c;--red:#d6121f;--red-t:#ff5560;--ok:#4cd07d;--warn:#f2b84b;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Roboto,system-ui,sans-serif}
+h1,h2,h3{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;margin:0;font-weight:700;letter-spacing:.02em}
+header{display:flex;align-items:center;gap:14px;padding:12px 18px;background:var(--panel);border-bottom:2px solid var(--red);flex-wrap:wrap}
+header img{width:44px;height:44px;border-radius:8px}
+header h1{font-size:26px}
+header .sp{flex:1}
+button,select,input{font:inherit;color:var(--ink)}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+.btn:hover{border-color:var(--red-t)}
+.btn.red{background:var(--red);border-color:var(--red)}
+nav{display:flex;gap:4px;padding:10px 18px 0;overflow-x:auto;border-bottom:1px solid var(--line);background:var(--bg)}
+nav button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;font-family:Oswald,sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);cursor:pointer;white-space:nowrap}
+nav button.on{color:var(--ink);border-color:var(--red)}
+main{padding:18px;max-width:1500px;margin:0 auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.card h2{font-size:20px;margin-bottom:10px;color:var(--red-t)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(420px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th{font-family:Oswald,sans-serif;text-transform:uppercase;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--muted);text-align:left;padding:8px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:4px 6px;border-bottom:1px solid var(--line)}
+td.n,th.n{text-align:right}
+tr.tot td{font-weight:700;background:var(--panel2);padding:8px}
+input,select{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 8px;width:100%;min-width:70px}
+input:focus,select:focus{outline:2px solid var(--red-t);border-color:transparent}
+select{min-width:125px}
+input[type=checkbox]{width:20px;height:20px;min-width:0;accent-color:var(--red)}
+input[type=number]{text-align:right}
+.kpi{display:flex;flex-direction:column;gap:2px}
+.kpi b{font-family:Oswald,sans-serif;font-size:30px;line-height:1.1}
+.kpi span{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.good{color:var(--ok)}.bad{color:var(--red-t)}.warn{color:var(--warn)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chip.on{background:var(--red);border-color:var(--red)}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+label.f{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.del{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;padding:0 6px}
+.del:hover{color:var(--red-t)}
+.note{color:var(--muted);font-size:13px}
+.rules li{margin:6px 0}
+@media(max-width:600px){.g2{grid-template-columns:1fr}main{padding:10px}}
+</style>
+</head>
+<body>
+<header>
+  <img src="data:image/png;base64,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" alt="">
+  <h1>Grey Varso — Gestion</h1>
+  <div class="sp"></div>
+  <span class="note" id="saved">Enregistré</span>
+  <button class="btn" id="bExport">Exporter</button>
+  <button class="btn" id="bImport">Importer</button>
+  <button class="btn" id="bReset">Nouvelle semaine</button>
+  <input type="file" id="file" accept=".json" hidden>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+
+<script>
+const DRUGS=["Cannabis","Cocaine","Mexicana","Ecstasy","Lean","B-Magic","Sporex","Héroine"];
+const ACTS=["ATM","Superette","Cambriolage","Go Fast","Conteneur","Darknet"];
+const FL=["Fleeca","Armurerie","Bijouterie"];
+const KEY="grey-varso-v1";
+const $=s=>document.querySelector(s);
+const fmt=n=>(Math.round(n)||0).toLocaleString("fr-FR").replace(/ | /g," ")+" $";
+const num=v=>parseFloat(v)||0;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function fresh(){
+  const names=["Dali Junior","Connor Saintclaire"];
+  const grades=["Lead","Co-Lead"];
+  return {
+    from:"",to:"",
+    p:{seuil:100000,pMin:30,pMax:35,labo:5000,d100:5000,trans:3000,qD:300,qA:15,qL:2},
+    m:Array.from({length:10},(_,i)=>({nom:names[i]||"Membre "+(i+1),grade:grades[i]||"",tel:"",rib:"",id:"",statut:"À verser",trans:0,bonus:0,propre:0,depense:0,dr:[],ac:[]})),
+    fl:[],lab:[],rec:[]
+  };
+}
+let S;
+try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+if(!S||!S.m)S=fresh();
+S.p=Object.assign(fresh().p,S.p||{});
+let tab="stats",sel=0;
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));$("#saved").textContent="Enregistré"}catch(e){$("#saved").textContent="Non enregistré"}}
+
+/* ---------- calculs ---------- */
+function calcM(m){
+  const sale_d=m.dr.reduce((a,r)=>a+num(r.montant),0), q_d=m.dr.reduce((a,r)=>a+num(r.qte),0);
+  const sale_a=m.ac.reduce((a,r)=>a+num(r.montant),0), q_a=m.ac.length;
+  const part=m.ac.reduce((a,r)=>{const x=num(r.montant);return a+x*((x>=S.p.seuil?S.p.pMax:S.p.pMin)/100)},0);
+  const gd=Math.floor(q_d/100)*S.p.d100;
+  const labs=S.lab.filter(r=>r.membre===m.nom).reduce((a,r)=>a+num(r.labos),0);
+  const branches=S.lab.filter(r=>r.membre===m.nom).reduce((a,r)=>a+num(r.branches),0);
+  const gl=labs*S.p.labo, gt=num(m.trans)*S.p.trans;
+  const total=part+gd+gl+gt+num(m.bonus);
+  const ok=q_d>=S.p.qD&&q_a>=S.p.qA&&labs>=S.p.qL;
+  return {sale_d,q_d,sale_a,q_a,sale:sale_d+sale_a,part,gd,labs,branches,gl,gt,total,ok};
+}
+const C=()=>S.m.map(calcM);
+const flTot=a=>S.fl.filter(r=>!a||r.action===a).reduce((s,r)=>s+num(r.somme),0);
+const flNb=a=>S.fl.filter(r=>r.action===a).length;
+
+/* ---------- helpers UI ---------- */
+function bind(path,type){ // returns attribute string
+  return `data-b="${path}" data-t="${type||"s"}"`;
+}
+function getP(path){return path.split(".").reduce((o,k)=>o?.[k],S)}
+function setP(path,val){const k=path.split(".");const last=k.pop();const o=k.reduce((o,x)=>o[x],S);o[last]=val}
+function inp(path,type,extra=""){
+  const v=getP(path);
+  if(type==="c")return `<input type="checkbox" ${bind(path,"c")} ${v?"checked":""}>`;
+  if(type==="n")return `<input type="number" step="any" ${bind(path,"n")} value="${v??""}" ${extra}>`;
+  return `<input type="${type==="d"?"text":"text"}" ${bind(path,"s")} value="${esc(v)}" ${extra}>`;
+}
+function sel_(path,opts,blank=true){
+  const v=getP(path)||"";
+  return `<select ${bind(path,"s")}>${blank?'<option value=""></option>':""}${opts.map(o=>`<option ${o===v?"selected":""}>${esc(o)}</option>`).join("")}</select>`;
+}
+function memberOpts(){return S.m.map(m=>m.nom)}
+const now=()=>{const d=new Date();const p=n=>String(n).padStart(2,"0");return `${p(d.getDate())}/${p(d.getMonth()+1)} ${p(d.getHours())}:${p(d.getMinutes())}`};
+
+/* ---------- vues ---------- */
+const TABS=[["stats","Stats"],["fiches","Fiches"],["fleeca","Fleeca / Armurerie"],["labo","Laboratoire"],["rec","Récoltes"],["sal","Salaires"],["admin","🔒 Admin"]];
+function renderNav(){
+  $("#nav").innerHTML=TABS.map(([k,l])=>`<button data-tab="${k}" class="${k===tab?"on":""}">${l}</button>`).join("");
+}
+function kpi(label,val,cls=""){return `<div class="kpi"><b class="${cls}">${val}</b><span>${label}</span></div>`}
+
+function vStats(){
+  const c=C();
+  const T=k=>c.reduce((a,x)=>a+x[k],0);
+  const rows=S.m.map((m,i)=>`<tr><td>${esc(m.nom)}</td><td class="n">${c[i].q_d}</td><td class="n">${c[i].q_a}</td><td class="n">${c[i].labs}</td><td class="n">${fmt(c[i].sale)}</td><td>${c[i].ok?"✅":"❌"}</td></tr>`).join("");
+  const acts=ACTS.map(a=>{
+    const all=S.m.flatMap(m=>m.ac.filter(r=>r.action===a));
+    return `<tr><td>${a}</td><td class="n">${fmt(all.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${all.length}</td></tr>`}).join("");
+  const fiches=T("sale"), caisse=fiches+flTot();
+  return `
+  <div class="card"><h2>Semaine</h2><div class="row2" style="max-width:520px">
+    <label class="f">Du<input ${bind("from","s")} value="${esc(S.from)}" placeholder="jj/mm"></label>
+    <label class="f">Au<input ${bind("to","s")} value="${esc(S.to)}" placeholder="jj/mm"></label></div></div>
+  <div class="card grid g3">
+    ${kpi("Drogue vendue",T("q_d"))}${kpi("Actions",T("q_a"))}${kpi("Laboratoires",T("labs"))}
+    ${kpi("Argent sale (fiches)",fmt(fiches))}${kpi("Fleeca / Armurerie",fmt(flTot()))}${kpi("Argent sale total",fmt(caisse),"bad")}
+  </div>
+  <div class="grid g2">
+  <div class="card"><h2>Par personne</h2><div class="wrap"><table>
+    <tr><th>Personne</th><th class="n">Drogue</th><th class="n">Actions</th><th class="n">Labos</th><th class="n">Argent sale</th><th>Quota</th></tr>${rows}
+    <tr class="tot"><td>TOTAL</td><td class="n">${T("q_d")}</td><td class="n">${T("q_a")}</td><td class="n">${T("labs")}</td><td class="n">${fmt(fiches)}</td><td></td></tr></table></div>
+    <p class="note">Quota : ${S.p.qD} de drogue, ${S.p.qA} actions et ${S.p.qL} labos minimum par semaine.</p></div>
+  <div class="card"><h2>Par action</h2><div class="wrap"><table>
+    <tr><th>Action</th><th class="n">Argent récolté</th><th class="n">Nombre</th></tr>${acts}
+    <tr class="tot"><td>TOTAL</td><td class="n">${fmt(S.m.reduce((s,m)=>s+calcM(m).sale_a,0))}</td><td class="n">${T("q_a")}</td></tr></table></div></div>
+  </div>
+  <div class="card"><h2>Règles</h2><ul class="rules">
+   <li>Quotas minimum par personne et par semaine : ${S.p.qD} de drogue vendue, ${S.p.qA} actions et ${S.p.qL} labos.</li>
+   <li>Répartition d'une action : ${S.p.pMin} % pour le membre et ${100-S.p.pMin} % pour la caisse sous ${fmt(S.p.seuil)}, puis ${S.p.pMax} % / ${100-S.p.pMax} % à partir de ${fmt(S.p.seuil)}. Fleeca et armurerie : 100 % pour la caisse.</li>
+   <li>Gains : ${fmt(S.p.labo)} par labo, ${fmt(S.p.d100)} par tranche de 100 de drogue vendue, ${fmt(S.p.trans)} par transaction.</li>
+   <li>Déclare toutes tes actions dans ta fiche : c'est elle qui sert au suivi des quotas et à la répartition. Blanchiment le dimanche soir, paie versée ensuite.</li></ul></div>`;
+}
+
+function vFiches(){
+  const m=S.m[sel], c=calcM(m), i=sel;
+  const chips=S.m.map((x,k)=>`<button class="chip ${k===sel?"on":""}" data-sel="${k}">${esc(x.nom)}</button>`).join("");
+  const drRows=m.dr.map((r,k)=>`<tr><td>${inp(`m.${i}.dr.${k}.date`,"d")}</td><td>${sel_(`m.${i}.dr.${k}.drogue`,DRUGS)}</td><td>${inp(`m.${i}.dr.${k}.qte`,"n")}</td><td>${inp(`m.${i}.dr.${k}.montant`,"n")}</td><td>${inp(`m.${i}.dr.${k}.valide`,"c")}</td><td><button class="del" data-del="m.${i}.dr.${k}">✕</button></td></tr>`).join("");
+  const acRows=m.ac.map((r,k)=>`<tr><td>${inp(`m.${i}.ac.${k}.date`,"d")}</td><td>${sel_(`m.${i}.ac.${k}.action`,ACTS)}</td><td class="n">1</td><td>${inp(`m.${i}.ac.${k}.montant`,"n")}</td><td>${inp(`m.${i}.ac.${k}.valide`,"c")}</td><td><button class="del" data-del="m.${i}.ac.${k}">✕</button></td></tr>`).join("");
+  const dT=DRUGS.map(d=>{const rr=m.dr.filter(r=>r.drogue===d);return `<tr><td>${d}</td><td class="n">${fmt(rr.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${rr.reduce((s,r)=>s+num(r.qte),0)}</td></tr>`}).join("");
+  const aT=ACTS.map(d=>{const rr=m.ac.filter(r=>r.action===d);return `<tr><td>${d}</td><td class="n">${fmt(rr.reduce((s,r)=>s+num(r.montant),0))}</td><td class="n">${rr.length}</td></tr>`}).join("");
+  const q=(a,b,t)=>`<tr><td>${t}</td><td class="n">${a} / ${b}</td><td>${a>=b?"✅":"❌"}</td></tr>`;
+  return `<div class="chips">${chips}</div>
+  <div class="card"><h2>${esc(m.nom)} — ${esc(m.grade||"Membre")}</h2>
+   <div class="row2">
+    <label class="f">Nom${inp(`m.${i}.nom`,"s")}</label><label class="f">Grade${inp(`m.${i}.grade`,"s")}</label>
+    <label class="f">Argent propre ($)${inp(`m.${i}.propre`,"n")}</label><label class="f">Argent dépensé ($)${inp(`m.${i}.depense`,"n")}</label></div>
+   <div class="grid g3" style="margin-top:14px">${kpi("Argent sale",fmt(c.sale),"bad")}${kpi("Argent propre",fmt(num(m.propre)))}${kpi("Argent dépensé",fmt(num(m.depense)))}</div></div>
+  <div class="grid g2">
+   <div class="card"><h2>Vente de drogue</h2><div class="wrap"><table>
+     <tr><th>Date / Heure</th><th>Drogue</th><th class="n">Quantité</th><th class="n">Montant</th><th>Validé</th><th></th></tr>${drRows}</table></div>
+     <p><button class="btn red" data-add="dr">+ Ajouter une vente</button></p></div>
+   <div class="card"><h2>Action illégale</h2><div class="wrap"><table>
+     <tr><th>Date / Heure</th><th>Action</th><th class="n">Quantité</th><th class="n">Montant</th><th>Validé</th><th></th></tr>${acRows}</table></div>
+     <p><button class="btn red" data-add="ac">+ Ajouter une action</button></p></div>
+  </div>
+  <div class="grid g3">
+   <div class="card"><h2>Total drogue</h2><table><tr><th>Drogue</th><th class="n">Argent sale</th><th class="n">Qté</th></tr>${dT}
+     <tr class="tot"><td>TOTAL</td><td class="n">${fmt(c.sale_d)}</td><td class="n">${c.q_d}</td></tr></table></div>
+   <div class="card"><h2>Total actions</h2><table><tr><th>Action</th><th class="n">Argent sale</th><th class="n">Nb</th></tr>${aT}
+     <tr class="tot"><td>TOTAL</td><td class="n">${fmt(c.sale_a)}</td><td class="n">${c.q_a}</td></tr></table></div>
+   <div class="card"><h2>Gains et quotas</h2><table>
+     <tr><td>Part des actions (${S.p.pMin} % / ${S.p.pMax} %)</td><td class="n">${fmt(c.part)}</td></tr>
+     <tr><td>Drogue (par tranche de 100)</td><td class="n">${fmt(c.gd)}</td></tr>
+     <tr class="tot"><td>TOTAL GAINS FICHE</td><td class="n">${fmt(c.part+c.gd)}</td></tr></table>
+     <table style="margin-top:12px"><tr><th>Quotas hebdo</th><th class="n">Progression</th><th>OK</th></tr>
+     ${q(c.q_d,S.p.qD,"Vente de drogue")}${q(c.q_a,S.p.qA,"Actions")}${q(c.labs,S.p.qL,"Laboratoires")}</table></div>
+  </div>`;
+}
+
+function vFleeca(){
+  const rows=S.fl.map((r,k)=>`<tr><td>${inp(`fl.${k}.date`,"s")}</td><td>${sel_(`fl.${k}.action`,FL)}</td><td>${inp(`fl.${k}.somme`,"n")}</td><td>${inp(`fl.${k}.objets`,"s")}</td><td>${inp(`fl.${k}.dh`,"s")}</td><td>${sel_(`fl.${k}.qui`,memberOpts())}</td><td>${sel_(`fl.${k}.acc1`,memberOpts())}</td><td>${sel_(`fl.${k}.acc2`,memberOpts())}</td><td>${inp(`fl.${k}.cp`,"c")}</td><td><button class="del" data-del="fl.${k}">✕</button></td></tr>`).join("");
+  return `<div class="grid g2" style="grid-template-columns:3fr 1fr"><div class="card"><h2>Fleeca / Armurerie / Bijouterie</h2><div class="wrap"><table>
+   <tr><th>Date</th><th>Action</th><th class="n">Somme</th><th>Objets</th><th>Date / Heure</th><th>Qui ?</th><th>Accomp. 1</th><th>Accomp. 2</th><th>CP</th><th></th></tr>${rows}</table></div>
+   <p><button class="btn red" data-add="fl">+ Ajouter une ligne</button></p>
+   <p class="note">Case CP cochée = OK. Fleeca et armurerie : 100 % pour la caisse.</p></div>
+   <div class="card"><h2>Récap</h2><table>
+    ${FL.map(a=>`<tr><td>Somme ${a}</td><td class="n">${fmt(flTot(a))}</td></tr>`).join("")}
+    <tr class="tot"><td>SOMME TOTALE</td><td class="n">${fmt(flTot())}</td></tr>
+    ${FL.map(a=>`<tr><td>Nb ${a}</td><td class="n">${flNb(a)}</td></tr>`).join("")}</table></div></div>`;
+}
+
+function vLabo(){
+  const c=C();
+  const rows=S.lab.map((r,k)=>`<tr><td>${inp(`lab.${k}.dh`,"s")}</td><td>${sel_(`lab.${k}.membre`,memberOpts())}</td><td>${inp(`lab.${k}.labos`,"n")}</td><td>${inp(`lab.${k}.branches`,"n")}</td><td>${inp(`lab.${k}.note`,"s")}</td><td><button class="del" data-del="lab.${k}">✕</button></td></tr>`).join("");
+  const rec=S.m.map((m,i)=>`<tr><td>${esc(m.nom)}</td><td class="n">${c[i].labs}</td><td class="n">${c[i].branches}</td><td>${c[i].labs>=S.p.qL?"✅":"❌"}</td></tr>`).join("");
+  return `<div class="grid g2" style="grid-template-columns:2fr 1fr"><div class="card"><h2>Laboratoire (branches de weed)</h2><div class="wrap"><table>
+   <tr><th>Date / Heure</th><th>Membre</th><th class="n">Labos</th><th class="n">Branches</th><th>Note</th><th></th></tr>${rows}</table></div>
+   <p><button class="btn red" data-add="lab">+ Ajouter une ligne</button></p></div>
+   <div class="card"><h2>Récap</h2><table><tr><th>Membre</th><th class="n">Labos</th><th class="n">Branches</th><th>Obj.</th></tr>${rec}</table>
+   <p class="note">Objectif : ${S.p.qL} labos minimum.</p></div></div>`;
+}
+
+function vRec(){
+  const rows=S.rec.map((r,k)=>`<tr><td>${inp(`rec.${k}.dh`,"s")}</td><td>${sel_(`rec.${k}.membre`,memberOpts())}</td><td>${inp(`rec.${k}.matiere`,"s")}</td><td>${inp(`rec.${k}.qte`,"n")}</td><td>${inp(`rec.${k}.note`,"s")}</td><td><button class="del" data-del="rec.${k}">✕</button></td></tr>`).join("");
+  const byM=S.m.map(m=>`<tr><td>${esc(m.nom)}</td><td class="n">${S.rec.filter(r=>r.membre===m.nom).reduce((a,r)=>a+num(r.qte),0)}</td></tr>`).join("");
+  const mats=[...new Set(S.rec.map(r=>r.matiere).filter(Boolean))];
+  const byMat=mats.map(x=>`<tr><td>${esc(x)}</td><td class="n">${S.rec.filter(r=>r.matiere===x).reduce((a,r)=>a+num(r.qte),0)}</td></tr>`).join("");
+  return `<div class="grid g2" style="grid-template-columns:2fr 1fr"><div class="card"><h2>Récoltes</h2><div class="wrap"><table>
+   <tr><th>Date / Heure</th><th>Membre</th><th>Matière première</th><th class="n">Quantité</th><th>Note</th><th></th></tr>${rows}</table></div>
+   <p><button class="btn red" data-add="rec">+ Ajouter une ligne</button></p></div>
+   <div><div class="card"><h2>Par membre</h2><table><tr><th>Membre</th><th class="n">Quantité</th></tr>${byM}</table></div>
+   <div class="card"><h2>Par matière</h2><table><tr><th>Matière</th><th class="n">Total</th></tr>${byMat||'<tr><td class="note">Rien pour l\'instant</td></tr>'}</table></div></div></div>`;
+}
+
+function vSal(){
+  const c=C();
+  const T=k=>c.reduce((a,x)=>a+x[k],0);
+  const rows=S.m.map((m,i)=>`<tr><td>${esc(m.nom)}</td><td class="n">${fmt(c[i].sale)}</td><td class="n">${fmt(c[i].part)}</td><td class="n">${fmt(c[i].gd)}</td><td class="n">${c[i].labs}</td><td class="n">${fmt(c[i].gl)}</td>
+   <td style="width:90px">${inp(`m.${i}.trans`,"n")}</td><td class="n">${fmt(c[i].gt)}</td><td style="width:120px">${inp(`m.${i}.bonus`,"n")}</td><td class="n"><b>${fmt(c[i].total)}</b></td>
+   <td style="width:150px">${sel_(`m.${i}.statut`,["À verser","Versé","En attente"],false)}</td></tr>`).join("");
+  const toPay=S.m.reduce((a,m,i)=>a+(m.statut==="Versé"?0:c[i].total),0);
+  const total=T("total"), caisse=T("sale")+flTot();
+  return `<div class="card"><h2>Salaire de la semaine</h2><div class="wrap"><table>
+   <tr><th>Membre</th><th class="n">Argent sale</th><th class="n">Gains actions</th><th class="n">Gains drogue</th><th class="n">Labos</th><th class="n">Gains labos</th><th class="n">Transactions</th><th class="n">Gains trans.</th><th class="n">Bonus / Malus</th><th class="n">Total à verser</th><th>Statut</th></tr>${rows}
+   <tr class="tot"><td>TOTAL</td><td class="n">${fmt(T("sale"))}</td><td class="n">${fmt(T("part"))}</td><td class="n">${fmt(T("gd"))}</td><td class="n">${T("labs")}</td><td class="n">${fmt(T("gl"))}</td><td></td><td class="n">${fmt(T("gt"))}</td><td></td><td class="n">${fmt(total)}</td><td></td></tr></table></div></div>
+  <div class="grid g2"><div class="card"><h2>Caisse du groupe</h2><table>
+    <tr><td>Argent sale total (fiches + Fleeca / Armurerie)</td><td class="n">${fmt(caisse)}</td></tr>
+    <tr><td>Total à verser aux membres</td><td class="n">${fmt(total)}</td></tr>
+    <tr class="tot"><td>Reste pour la caisse (avant blanchiment)</td><td class="n ${caisse-total<0?"bad":"good"}">${fmt(caisse-total)}</td></tr></table></div>
+   <div class="card"><h2>Reste à verser</h2>${kpi("Pas encore versé",fmt(toPay),toPay>0?"warn":"good")}</div></div>
+  <div class="card"><h2>Règles</h2><ul class="rules">
+   <li>Actions : part membre de ${S.p.pMin} % si l'action est &lt; ${fmt(S.p.seuil)}, ${S.p.pMax} % si ≥ ${fmt(S.p.seuil)}. Fleeca / Armurerie : 100 % pour la caisse.</li>
+   <li>Laboratoires : ${S.p.qL} minimum par semaine (obligatoire), ${fmt(S.p.labo)} par labo. 100 de drogue vendus : ${fmt(S.p.d100)}. Transaction : ${fmt(S.p.trans)}.</li></ul></div>`;
+}
+
+function vAdmin(){
+  const c=C();
+  const rows=S.m.map((m,i)=>`<tr><td>${inp(`m.${i}.nom`,"s")}</td><td>${inp(`m.${i}.grade`,"s")}</td><td>${inp(`m.${i}.tel`,"s")}</td><td>${inp(`m.${i}.rib`,"s")}</td><td>${inp(`m.${i}.id`,"s")}</td></tr>`).join("");
+  const pay=S.m.map((m,i)=>`<tr><td>${esc(m.nom)}</td><td>${esc(m.tel)}</td><td>${esc(m.rib)}</td><td>${esc(m.id)}</td><td class="n">${fmt(c[i].total)}</td><td>${esc(m.statut)}</td></tr>`).join("");
+  const P=(k,l,suf)=>`<label class="f">${l}<input type="number" step="any" ${bind("p."+k,"n")} value="${S.p[k]}"></label>`;
+  return `<div class="card"><h2>Membres</h2><div class="wrap"><table><tr><th>Nom</th><th>Grade</th><th>Téléphone</th><th>RIB</th><th>ID unique</th></tr>${rows}</table></div>
+   <p class="note">Change le nom d'un membre avant de saisir ses données : les labos et récoltes sont reliés au nom.</p></div>
+  <div class="card"><h2>Paramètres</h2><div class="row2">
+   ${P("seuil","Seuil par action ($)")}${P("pMin","Part membre sous le seuil (%)")}${P("pMax","Part membre au-dessus (%)")}
+   ${P("labo","Gain par labo ($)")}${P("d100","Gain par 100 de drogue ($)")}${P("trans","Gain par transaction ($)")}
+   ${P("qD","Quota drogue")}${P("qA","Quota actions")}${P("qL","Quota labos")}</div></div>
+  <div class="card"><h2>Salaires à verser</h2><div class="wrap"><table><tr><th>Nom</th><th>Téléphone</th><th>RIB</th><th>ID unique</th><th class="n">Montant</th><th>Statut</th></tr>${pay}
+   <tr class="tot"><td colspan="4">TOTAL À VERSER</td><td class="n">${fmt(c.reduce((a,x)=>a+x.total,0))}</td><td></td></tr></table></div></div>
+  <div class="card"><h2>Sauvegarde</h2><p class="note">Les données sont enregistrées dans ce navigateur, sur cet appareil. Utilise « Exporter » pour garder une copie et « Importer » pour la remettre ailleurs.</p></div>`;
+}
+
+function cyrb53(str,seed=0){let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677);}h1=Math.imul(h1^(h1>>>16),2246822507);h1^=Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507);h2^=Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)}
+const ADMIN_HASH=4442493394655713;
+let unlocked=false;try{unlocked=sessionStorage.getItem("gv-admin")==="1"}catch(e){}
+function tryUnlock(){
+  const v=($("#pin")||{}).value||"";
+  if(cyrb53("greyvarso:"+v.trim().toLowerCase())===ADMIN_HASH){unlocked=true;try{sessionStorage.setItem("gv-admin","1")}catch(e){}render()}
+  else{const m=$("#pinmsg");if(m)m.textContent="Code incorrect"}
+}
+function vLock(){return `<div class="card" style="max-width:420px;margin:40px auto"><h2>🔒 Zone admin</h2><p class="note">Accès réservé. Entre le code admin.</p>
+  <input id="pin" type="password" placeholder="Code admin" autocomplete="off"><p id="pinmsg" class="bad"></p>
+  <button class="btn red" data-unlock="1">Déverrouiller</button></div>`}
+function vAdminGate(){return unlocked?`<p><button class="btn" data-lock="1">🔒 Verrouiller l'admin</button></p>`+vAdmin():vLock()}
+const VIEWS={stats:vStats,fiches:vFiches,fleeca:vFleeca,labo:vLabo,rec:vRec,sal:vSal,admin:vAdminGate};
+function refresh(){
+  const m=$("#main"),tmp=document.createElement("div");
+  tmp.innerHTML=VIEWS[tab]();
+  const A=m.querySelectorAll("*"),B=tmp.querySelectorAll("*");
+  if(A.length!==B.length){const f=document.activeElement;render();return}
+  A.forEach((a,i)=>{
+    const b=B[i];
+    if(a.tagName!==b.tagName)return;
+    if(a.matches("input,select,option,textarea"))return;
+    if(a.children.length===0){
+      if(a.textContent!==b.textContent)a.textContent=b.textContent;
+      if(a.className!==b.className)a.className=b.className;
+    }
+  });
+}
+function render(){renderNav();$("#main").innerHTML=VIEWS[tab]()}
+
+/* ---------- événements ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.unlock){tryUnlock();return}
+  if(t.dataset.lock){unlocked=false;try{sessionStorage.removeItem("gv-admin")}catch(e){}render();return}
+  if(t.dataset.tab){tab=t.dataset.tab;render();return}
+  if(t.dataset.sel!==undefined){sel=+t.dataset.sel;render();return}
+  if(t.dataset.add){
+    const a=t.dataset.add;
+    if(a==="dr")S.m[sel].dr.push({date:now(),drogue:"",qte:"",montant:"",valide:false});
+    if(a==="ac")S.m[sel].ac.push({date:now(),action:"",qte:1,montant:"",valide:false});
+    if(a==="fl")S.fl.push({date:now().split(" ")[0],action:"",somme:"",objets:"",dh:now(),qui:"",acc1:"",acc2:"",cp:false});
+    if(a==="lab")S.lab.push({dh:now(),membre:"",labos:1,branches:"",note:""});
+    if(a==="rec")S.rec.push({dh:now(),membre:"",matiere:"",qte:"",note:""});
+    save();render();return}
+  if(t.dataset.del){
+    const k=t.dataset.del.split(".");const idx=+k.pop();const arr=k.reduce((o,x)=>o[x],S);
+    arr.splice(idx,1);save();render();return}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.id==="pin")tryUnlock()});
+document.addEventListener("input",e=>{
+  const el=e.target;if(!el.dataset.b)return;
+  const v=el.dataset.t==="c"?el.checked:el.dataset.t==="n"?(el.value===""?"":parseFloat(el.value)):el.value;
+  setP(el.dataset.b,v);save();refresh();
+});
+document.addEventListener("change",e=>{
+  const el=e.target;if(!el.dataset.b)return;
+  refresh();
+});
+$("#bExport").onclick=()=>{
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:"application/json"}));
+  a.download="grey-varso-"+new Date().toISOString().slice(0,10)+".json";a.click()};
+$("#bImport").onclick=()=>$("#file").click();
+$("#file").onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.m)throw 0;S=d;S.p=Object.assign(fresh().p,S.p||{});save();render()}catch(x){alert("Fichier invalide")}};r.readAsText(f);e.target.value=""};
+$("#bReset").onclick=()=>{
+  if(!confirm("Nouvelle semaine : on efface les ventes, actions, labos, récoltes et statuts. Les membres et paramètres restent. Pense à exporter avant. Continuer ?"))return;
+  S.m.forEach(m=>{m.dr=[];m.ac=[];m.trans=0;m.bonus=0;m.statut="À verser"});S.fl=[];S.lab=[];S.rec=[];S.from="";S.to="";save();render()};
+render();
+</script>
+</body>
+</html>
