@@ -82,7 +82,18 @@ def main(argv=None):
     se.add_argument("--out", default="output")
     se.add_argument("--skip-done", action="store_true", help="ne refait pas les épisodes déjà rendus")
 
+    so = sub.add_parser("sound", help="banque de sons : earshot, Openverse, écoute")
+    ss = so.add_subparsers(dest="scmd", required=True)
+    sm = ss.add_parser("make", help="générer un bruitage avec earshot"); sm.add_argument("description")
+    sm.add_argument("--dur", type=float); sm.add_argument("--out")
+    sf = ss.add_parser("find", help="chercher des sons CC0 sur Openverse"); sf.add_argument("query")
+    sf.add_argument("--get", type=int, help="télécharger le résultat n°")
+    sl = ss.add_parser("listen", help="analyser un son ou une vidéo (LUFS, crête, silences, spectrogramme)")
+    sl.add_argument("file"); sl.add_argument("--picture")
+
     args = p.parse_args(argv)
+    if args.cmd == "sound":
+        return sound_cmd(args)
     if args.cmd == "voice":
         return voice_cmd(args)
     if args.cmd == "series":
@@ -126,6 +137,30 @@ def _show(pf):
         print(f"   effets : {', '.join(pf['effects'])}")
     if pf.get("why"):
         print(f"   pourquoi : {pf['why']}")
+
+
+def sound_cmd(args):
+    import shutil
+    from .skills import sound_bank as sb
+    cfg = Config()
+    if args.scmd == "make":
+        if not sb.earshot_available():
+            print('earshot n\'est pas installé : pip install "earshot @ git+https://github.com/Leonxlnx/earshot"')
+            return 1
+        f = sb.earshot_make(args.description, args.dur)
+        if f and args.out:
+            shutil.copy(f, args.out)
+            f = args.out
+        print(f"🔊 {f}" if f else "Aucun son trouvé dans le catalogue earshot (essaie une autre description).")
+    elif args.scmd == "find":
+        res = sb.openverse_search(args.query, ca_bundle=cfg.ca_bundle)
+        for i, r in enumerate(res):
+            print(f"{i}. {r.get('title')} — {r.get('creator')} [{r.get('license')}] {(r.get('duration') or 0)/1000:.1f}s")
+        if args.get is not None:
+            print(f"🔊 {sb.openverse_get(args.query, ca_bundle=cfg.ca_bundle, pick=args.get)}  (crédit ajouté à sounds/CREDITS.md)")
+    elif args.scmd == "listen":
+        rep = sb.listen(args.file, args.picture)
+        print(json.dumps(rep, ensure_ascii=False, indent=1))
 
 
 def series_cmd(args):

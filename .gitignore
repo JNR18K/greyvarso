@@ -4,3 +4,4 @@ __pycache__/
 .env
 voices/*/
 voices/*-preview*
+sounds/

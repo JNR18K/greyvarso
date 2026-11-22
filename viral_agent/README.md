@@ -106,6 +106,29 @@ python -m viral_agent make "ton sujet" --voice-profile moi
   Cloner une célébrité ou une personne réelle sans accord est illégal dans beaucoup de pays et fait bannir les comptes.
   Chatterbox ajoute aussi un watermark inaudible à l'audio généré.
 
+## 🔊 Banque de sons et « oreilles »
+
+| Source | Rôle |
+|---|---|
+| **earshot** ([Leonxlnx/earshot](https://github.com/Leonxlnx/earshot), MIT) | Génère un bruitage à partir d'une description, sur CPU, en quelques secondes : whoosh, impacts, ambiances… Libre d'utilisation sans crédit. |
+| **Openverse** ([api.openverse.org](https://api.openverse.org)) | Vrais enregistrements Freesound sous licence **CC0**. Les crédits sont ajoutés automatiquement à `sounds/CREDITS.md`. |
+| **Oreilles** (`listen`) | Mesure le volume (LUFS), la crête, la dynamique et les silences, et dessine un spectrogramme pour repérer une voix noyée, une saturation ou un trou dans le son. |
+
+```bash
+pip install "earshot @ git+https://github.com/Leonxlnx/earshot" "librosa>=0.10"
+python -m viral_agent sound make "a deep cinematic impact boom" --out boom.wav
+python -m viral_agent sound find "ocean waves" --get 0
+python -m viral_agent sound listen output/wardogs-partie-01/video.mp4 --picture ears.png
+```
+
+Dans les séries, chaque scène reçoit automatiquement :
+- une **ambiance** déduite de l'image (plage, désert, bureau, entrepôt, tribunal…) ;
+- des **bruitages** calés sur l'action : whoosh à l'arrivée d'un bandeau, alerte si le bandeau est rouge, tiroir-caisse s'il est vert, impact ou montée de tension sur les mouvements de caméra, téléphone, coups à la porte…
+
+Le tout est mixé sous la voix avec ducking, et le rendu final est contrôlé à l'oreille. Tu peux imposer les sons
+d'une scène dans la bible avec `"sfx": ["impact", "phone"]` et `"ambience": "rain on a car roof"`.
+Réglages de série : `"sound": false`, `"sound_source": "openverse"`, `"ambience_db": -17`.
+
 ## 📺 Séries (ex. 30 TikToks d'une minute)
 
 Le mode série produit des épisodes au **style POV** : vue à la première personne avec les mains en bas de l'écran,

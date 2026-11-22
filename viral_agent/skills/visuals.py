@@ -15,7 +15,7 @@ def build_prompt(visual, style="cinematic", subject_hint=""):
     """Le style passe en premier : les modèles d'image donnent plus de poids au début du prompt."""
     style_txt = VISUAL_STYLES.get(style, style)
     hint = f", {subject_hint}" if subject_hint else ""
-    return f"{style_txt}. {visual}{hint}. Vertical composition, {NEGATIVE}"
+    return f"{style_txt}: {visual}{hint}. Bright colors, detailed background, vertical, {NEGATIVE}"
 
 
 def generate_image(cfg, prompt, out_path, seed=None, retries=8, session=None):

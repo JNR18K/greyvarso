@@ -5,7 +5,7 @@ SERIES = {
   "lang": "fr",
   "style": "pov_cartoon",
   "seed": 424242,
-  "pov_hint": "seen from the eyes of the narrator, the narrator's own cartoon hands visible at the bottom corners of the frame",
+  "pov_hint": "viewer's cartoon hands at the bottom",
   "disclaimer": "Dramatisation inspirée de l'histoire vraie d'AEY Inc. (2005-2008). Dialogues et certaines scènes imaginés.",
   "hashtags": ["#wardogs", "#histoirevraie", "#pov", "#serie", "#storytime", "#fyp", "#pourtoi"],
   "voices": {

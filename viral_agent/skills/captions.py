@@ -69,7 +69,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             end = min(end + 0.25, chunks[k + 1][0]["start"])
         txt = " ".join(_clean(w["word"]) for w in chunk)
         col = hex_to_ass(chunk[0].get("color"))
-        anim = r"scx80scy80	(0,90,scx106scy106)	(90,160,scx100scy100)"
+        anim = r"\fscx80\fscy80\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)"
         lines.append(f"Dialogue: 0,{_ts(start)},{_ts(end)},Pov,,0,0,0,,{{" + rf"\pos({x},{y})\c{col}{anim}" + f"}}{txt}")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(header + "\n".join(lines) + "\n")

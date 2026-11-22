@@ -20,7 +20,7 @@ from pathlib import Path
 
 import requests
 
-from . import captions, editor, overlays, visuals, voice_lab
+from . import captions, editor, overlays, sound_bank, visuals, voice_lab
 
 
 def load_bible(path):
@@ -105,6 +105,8 @@ def render_episode(cfg, bible, n, out_dir="output", log=print, seed=None):
     total = offset
     voice_wav = editor.concat_audio(scene_audio, parts / "voice.wav")
     log(f"   🎙️  voix : {total:.1f}s, {len(cache)} personnage(s)")
+    if series.get("sound", True):
+        voice_wav = _sound_design(cfg, series, scenes, durations, voice_wav, total, parts, log)
 
     images = [f.result() for f in futures]
     pool.shutdown()
@@ -131,10 +133,44 @@ def render_episode(cfg, bible, n, out_dir="output", log=print, seed=None):
     ass = captions.build_pov_ass(words, parts / "subs.ass", cfg.width, cfg.height)
     final = editor.assemble(clips, voice_wav, ass, work / "video.mp4", total, music=series.get("music"),
                             progress_bar=False, w=cfg.width, h=cfg.height)
+    rep = sound_bank.listen(final, parts / "ears.png")  # contrôle à l'oreille du rendu final
+    (parts / "ears.json").write_text(json.dumps(rep, ensure_ascii=False, indent=1))
+    log(f"   👂 {rep['lufs']} LUFS, crête {rep['true_peak']} dBTP" + (f" ⚠️ {', '.join(rep['issues'])}" if rep["issues"] else " ✔"))
     editor.make_cover(images[0], f"Partie {n} : {ep.get('cover', ep['title'])}", work / "cover.jpg", cfg.width, cfg.height)
     (work / "POST.md").write_text(_post(series, ep, n, total_eps, total), encoding="utf-8")
     log(f"   ✅ {final} ({total:.1f}s) en {time.time() - t0:.0f}s")
     return {"episode": n, "video": str(final), "duration": total}
+
+
+def _sound_design(cfg, series, scenes, durations, voice_wav, total, parts, log):
+    """Ambiances + bruitages (earshot / Openverse), mixés sous la voix, puis vérifiés à l'oreille (mesures)."""
+    prefer = series.get("sound_source", "earshot")
+    amb_gain = series.get("ambience_db", -17)
+    cues, beds, t = [], [], 0.0
+    for i, (sc, d) in enumerate(zip(scenes, durations)):
+        amb, events = sound_bank.auto_scene_sounds(sc)
+        if amb:
+            f = sound_bank.get_sound(amb[0], amb[1], dur=12, loop=True, prefer=prefer, ca_bundle=cfg.ca_bundle)
+            if f:
+                beds.append((t, t + d, f, amb_gain))
+        for ev in events:
+            spec = sound_bank.CUES.get(ev)
+            if not spec:
+                continue
+            f = sound_bank.get_sound(spec[0], spec[1], prefer=prefer, ca_bundle=cfg.ca_bundle, seed=i + 1)
+            if f:
+                cues.append((t + (0.0 if ev == "banner" else 0.05), f, spec[2]))
+        t += d
+    # fusionne les ambiances identiques qui se suivent (pas de coupure entre deux plans du même lieu)
+    merged = []
+    for b in beds:
+        if merged and merged[-1][2] == b[2] and abs(merged[-1][1] - b[0]) < 0.01:
+            merged[-1] = (merged[-1][0], b[1], b[2], b[3])
+        else:
+            merged.append(b)
+    out = sound_bank.mix_track(voice_wav, cues, merged, total, parts / "voice_fx.wav")
+    log(f"   🔊 son : {len(merged)} ambiance(s), {len(cues)} bruitage(s)")
+    return out
 
 
 def _post(series, ep, n, total_eps, dur):
