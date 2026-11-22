@@ -10,7 +10,7 @@ import requests
 
 from .config import Config
 from .llm import LLM
-from .skills import trends, script as scriptwriter, critic, seo, voice, visuals, captions, editor
+from .skills import trends, script as scriptwriter, critic, seo, voice, voice_lab, visuals, captions, editor
 
 
 def slugify(s, n=40):
@@ -55,7 +55,7 @@ class ViralAgent:
     # ---------- Pipeline complet ----------
     def make_video(self, topic, out_dir="output", lang="fr", duration=35, style="cinematic",
                    voice_style="male", voice_name=None, rate="+8%", tone="captivant", music=None,
-                   hook=None, fmt=None, niche="", script_data=None, caption_pos="center"):
+                   hook=None, fmt=None, niche="", script_data=None, caption_pos="center", voice_profile=None):
         t0 = time.time()
         cfg = self.cfg
         sc = script_data or self.script(topic, lang, duration, tone, hook, fmt)
@@ -78,12 +78,16 @@ class ViralAgent:
         img_futures = [pool.submit(gen, i) for i in range(len(scenes))]
 
         # Voix scène par scène -> timings exacts
-        vname = voice.pick_voice(lang, voice_style, voice_name)
-        self.log(f"🎙️  Voix off ({vname})…")
+        if voice_profile:
+            profile = voice_lab.load_profile(voice_profile) if isinstance(voice_profile, str) else voice_profile
+        else:
+            profile = {"name": "défaut", "engine": "edge", "lang": lang, "effects": [],
+                       "edge": {"voice": voice.pick_voice(lang, voice_style, voice_name), "rate": rate}}
+        self.log(f"🎙️  Voix off ({profile['name']} · {profile['engine']})…")
         audio_parts, all_words, durations, offset = [], [], [], 0.0
         for i, s in enumerate(scenes):
             ap = work / "parts" / f"voice_{i:02d}.mp3"
-            dur, words = voice.synthesize(s["text"], ap, vname, rate=rate, ca_bundle=cfg.ca_bundle)
+            dur, words = voice_lab.synthesize(profile, s["text"], ap, ca_bundle=cfg.ca_bundle)
             dur += 0.12  # micro-respiration entre scènes
             for w in words:
                 all_words.append({"word": w["word"], "start": w["start"] + offset, "end": w["end"] + offset})

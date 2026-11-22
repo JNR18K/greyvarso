@@ -1,0 +1,5 @@
+# Optionnel : clonage de voix en local (Chatterbox, open source MIT) + alignement mot à mot
+# pip install -r requirements-clone.txt --extra-index-url https://download.pytorch.org/whl/cpu
+chatterbox-tts>=0.1.7
+faster-whisper>=1.1
+setuptools<81   # requis par le watermark de Chatterbox (pkg_resources)

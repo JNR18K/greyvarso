@@ -20,9 +20,9 @@ def pick_voice(lang="fr", style="male", voice=None):
     return VOICES.get(lang, VOICES["en"]).get(style, VOICES.get(lang, VOICES["en"])["male"])
 
 
-async def _tts(text, voice, rate, pitch, out_path):
+async def _tts(text, voice, rate, pitch, out_path, volume="+0%"):
     words = []
-    com = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch, boundary="WordBoundary")
+    com = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch, volume=volume, boundary="WordBoundary")
     with open(out_path, "wb") as f:
         async for ch in com.stream():
             if ch["type"] == "audio":
@@ -39,13 +39,13 @@ def audio_duration(path):
     return float(out.stdout.strip())
 
 
-def synthesize(text, out_path, voice, rate="+8%", pitch="+0Hz", ca_bundle=None, retries=3):
+def synthesize(text, out_path, voice, rate="+8%", pitch="+0Hz", ca_bundle=None, retries=3, volume="+0%"):
     """Retourne (durée, [{word,start,end}])."""
     _patch_ssl(ca_bundle)
     err = None
     for _ in range(retries):
         try:
-            words = asyncio.run(_tts(text, voice, rate, pitch, str(out_path)))
+            words = asyncio.run(_tts(text, voice, rate, pitch, str(out_path), volume))
             return audio_duration(out_path), words
         except Exception as e:
             err = e

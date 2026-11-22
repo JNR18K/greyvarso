@@ -14,6 +14,7 @@ Edge TTS pour la voix, ffmpeg pour le montage.
 | 🧐 Critique viralité | `skills/critic.py` | Note hook, rétention, émotion, clarté, partage, boucle et **véracité**, puis renvoie en réécriture tant que le score est sous 8/10 |
 | 🎨 Directeur artistique | `skills/visuals.py` | Une image IA par scène, 7 styles (cinematic, anime, realistic, dark, 3d, comic, minimal) |
 | 🎙️ Voix off | `skills/voice.py` | Voix neuronales dans 7 langues, timing mot par mot |
+| 🧬 Labo de voix | `skills/voice_lab.py` | **Crée tes propres voix** : à partir d'une description, avec des réglages manuels et 14 effets, ou par **clonage** d'un enregistrement |
 | 💬 Sous-titres | `skills/captions.py` | Style TikTok : gros mots qui « popent », mot courant en jaune, mots-clés en vert |
 | ✂️ Monteur | `skills/editor.py` | Ken Burns varié, flash entre les scènes, barre de progression, musique avec ducking, volume normalisé à -14 LUFS |
 | 📈 SEO / publication | `skills/seo.py` | Légendes et hashtags par plateforme, titre Shorts, commentaire à épingler, heures de post, idées de suites |
@@ -64,6 +65,47 @@ Options utiles : `--lang fr|en|es|de|it|pt|ar`, `--duration 35`, `--tone drôle|
 - `POST.md` : tout ce qu'il faut copier-coller pour publier, plus 3 hooks alternatifs pour faire de l'A/B test
 - `publish.json` et `script.json` : les données brutes
 
+## 🧬 Créer une voix pour tes vidéos
+
+Chaque voix créée devient un profil réutilisable (`voices/<nom>.json`), que tu passes à n'importe quelle vidéo
+avec `--voice-profile <nom>`. C'est ce qui donne une identité sonore à ta chaîne.
+
+### 1. Décrire la voix (gratuit, immédiat)
+```bash
+python -m viral_agent voice design horreur "conteuse mystérieuse et posée, ambiance pesante"
+python -m viral_agent voice preview horreur            # écoute
+python -m viral_agent make "La maison abandonnée de Lyon" --voice-profile horreur --style dark
+```
+L'IA choisit la meilleure voix de base parmi toutes les voix de la langue, puis règle le débit, la hauteur et les effets.
+
+### 2. Régler la voix soi-même
+```bash
+python -m viral_agent voice catalog --lang fr          # toutes les voix de base disponibles
+python -m viral_agent voice effects                    # les 14 effets
+python -m viral_agent voice create narrateur --base fr-FR-HenriNeural --pitch -6Hz --rate +5% --effects deep,broadcast
+```
+Effets : `deep`, `deeper`, `high`, `chipmunk`, `warm`, `broadcast`, `crisp`, `radio`, `phone`, `robot`,
+`whisper`, `echo`, `cave` et `demon`, plus `af:<filtre ffmpeg>` pour les experts. Les effets de hauteur ne changent
+pas la durée, donc les sous-titres restent calés.
+
+### 3. Cloner TA voix
+Enregistre 10 à 20 secondes de parole claire au téléphone, dans une pièce calme, avec un ton naturel. Ensuite :
+```bash
+pip install -r requirements-clone.txt --extra-index-url https://download.pytorch.org/whl/cpu   # une seule fois
+python -m viral_agent voice clone moi --sample ma_voix.m4a --consent
+python -m viral_agent voice preview moi "Salut, c'est moi, et aujourd'hui je te montre un truc fou."
+python -m viral_agent make "ton sujet" --voice-profile moi
+```
+- **Chatterbox** (par défaut) est gratuit, tourne en local et gère 23 langues dont le français. Le modèle (~2 Go)
+  se télécharge au premier usage. Compte environ 10 s de calcul par scène sur CPU, beaucoup moins avec un GPU.
+  Règle l'expressivité avec `--exaggeration 0.3` (calme) à `0.8` (très expressif).
+- **ElevenLabs** donne la qualité studio : `export ELEVENLABS_API_KEY=...` puis `--engine elevenlabs`.
+- L'échantillon est nettoyé automatiquement : débruitage, silences retirés, normalisation.
+- Les timings mot à mot des sous-titres viennent de faster-whisper. Sans lui, ils sont estimés.
+- `--consent` est obligatoire. Ne clone que ta voix ou celle d'une personne qui t'a donné son accord.
+  Cloner une célébrité ou une personne réelle sans accord est illégal dans beaucoup de pays et fait bannir les comptes.
+  Chatterbox ajoute aussi un watermark inaudible à l'audio généré.
+
 ## Variables d'environnement
 
 | Variable | Défaut | |
@@ -75,6 +117,9 @@ Options utiles : `--lang fr|en|es|de|it|pt|ar`, `--duration 35`, `--tone drôle|
 | `POLLINATIONS_TOKEN` | (vide) | Token gratuit pour des limites d'images plus hautes |
 | `MIN_VIRAL_SCORE` | `8` | Score à atteindre avant de lancer le rendu |
 | `MAX_REWRITES` | `2` | Nombre maximum de réécritures du script |
+| `VOICES_DIR` | `voices` | Dossier des voix créées |
+| `ELEVENLABS_API_KEY` | (vide) | Pour le clonage ElevenLabs |
+| `WHISPER_MODEL` | `base` | Modèle d'alignement des sous-titres (tiny, base, small…) |
 
 ## Conseils pour percer
 
