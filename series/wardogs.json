@@ -1,0 +1,5256 @@
+{
+ "series": {
+  "title": "War Dogs : l'histoire vraie",
+  "slug": "wardogs",
+  "tag": "War Dogs",
+  "lang": "fr",
+  "style": "pov_cartoon",
+  "seed": 424242,
+  "pov_hint": "seen from the eyes of the narrator, the narrator's own cartoon hands visible at the bottom corners of the frame",
+  "disclaimer": "Dramatisation inspirée de l'histoire vraie d'AEY Inc. (2005-2008). Dialogues et certaines scènes imaginés.",
+  "hashtags": [
+   "#wardogs",
+   "#histoirevraie",
+   "#pov",
+   "#serie",
+   "#storytime",
+   "#fyp",
+   "#pourtoi"
+  ],
+  "voices": {
+   "narrateur": {
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "rate": "-2%",
+    "color": "#FFFFFF"
+   },
+   "david": {
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "rate": "+0%",
+    "color": "#8FD3FF"
+   },
+   "efraim": {
+    "voice": "fr-CA-AntoineNeural",
+    "rate": "+12%",
+    "color": "#8CFF6B"
+   },
+   "lea": {
+    "voice": "fr-FR-DeniseNeural",
+    "rate": "+4%",
+    "color": "#FFA0D9"
+   },
+   "klaus": {
+    "voice": "fr-BE-GerardNeural",
+    "rate": "-6%",
+    "pitch": "-6Hz",
+    "effects": [
+     "deep"
+    ],
+    "color": "#FFB347"
+   },
+   "ralph": {
+    "voice": "fr-CA-JeanNeural",
+    "rate": "-2%",
+    "color": "#FFE066"
+   },
+   "arben": {
+    "voice": "fr-CH-FabriceNeural",
+    "rate": "+0%",
+    "color": "#C9A0FF"
+   },
+   "soldat": {
+    "voice": "fr-CA-ThierryNeural",
+    "rate": "+6%",
+    "color": "#FF8A8A"
+   },
+   "agent": {
+    "voice": "fr-CA-ThierryNeural",
+    "rate": "-4%",
+    "pitch": "-4Hz",
+    "color": "#FF8A8A"
+   },
+   "chauffeur": {
+    "voice": "fr-CH-FabriceNeural",
+    "rate": "+10%",
+    "color": "#C9A0FF"
+   },
+   "douanier": {
+    "voice": "fr-BE-GerardNeural",
+    "rate": "+0%",
+    "color": "#C9A0FF"
+   },
+   "client": {
+    "voice": "fr-CA-JeanNeural",
+    "rate": "+8%",
+    "color": "#FFE066"
+   },
+   "directrice": {
+    "voice": "fr-CA-SylvieNeural",
+    "rate": "+6%",
+    "color": "#FFA0D9"
+   },
+   "journaliste": {
+    "voice": "fr-FR-EloiseNeural",
+    "rate": "+4%",
+    "color": "#7FE3FF"
+   },
+   "avocat": {
+    "voice": "fr-CA-JeanNeural",
+    "rate": "-2%",
+    "color": "#FFE066"
+   },
+   "juge": {
+    "voice": "fr-BE-GerardNeural",
+    "rate": "-8%",
+    "color": "#FFE066"
+   }
+  },
+  "characters": {
+   "efraim": "a chubby young man with curly black hair, short black beard, gold aviator sunglasses, white tracksuit and gold chain",
+   "lea": "a young woman with long wavy blond hair and a yellow sundress",
+   "klaus": "a tall thin older man with slicked grey hair, black turtleneck and long black coat",
+   "ralph": "an old bald man with round glasses and a beige suit",
+   "arben": "a middle-aged man with a thick black mustache, flat cap and grey jacket",
+   "soldat": "a soldier in desert camouflage uniform and helmet"
+  }
+ },
+ "episodes": [
+  {
+   "n": 1,
+   "title": "Le masseur de Miami",
+   "teaser": "Tout commence par un mensonge…",
+   "scenes": [
+    {
+     "visual": "huge dark warehouse filled with endless stacks of old wooden ammunition crates, single hanging lamp",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'ai vingt-deux ans, et je suis dans un entrepôt en Albanie."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "alerte",
+      "title": "Albanie, 2007",
+      "subtitle": "Entrepôt classé secret",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "close-up of an open wooden crate full of old rifle cartridges, dust in the light",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Devant moi, des millions de cartouches. Et elles ne devraient pas être là."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "same warehouse, cartoon hands trembling holding a flip phone",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Efraim… on a un énorme problème."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "sunny Miami beach boulevard with palm trees and pastel art deco buildings",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mais pour comprendre, il faut revenir deux ans en arrière."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "flashback",
+      "title": "Miami, 2005",
+      "subtitle": "Deux ans plus tôt",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "small spa massage room with folded towels and oil bottles, grumpy old man in a white bathrobe sitting on the massage table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Moi, c'est David. Masseur. Je gagne soixante-quinze dollars par massage."
+      }
+     ],
+     "move": "zoom_in_left"
+    },
+    {
+     "visual": "grumpy old man in a white bathrobe throwing a few coins on the massage table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Pourboire du jour : deux dollars. Et un conseil pour devenir quelqu'un."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "rich old man in bathrobe complaining, pointing finger, massage room",
+     "chars": [],
+     "lines": [
+      {
+       "s": "client",
+       "t": "Plus fort ! Je vous paie pour quoi, exactement ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV cartoon hands holding a folded white towel in a small spa room, oil bottles on a shelf",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mes mains sentent l'huile d'amande. Mon compte en banque sent le vide."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "tiny messy apartment kitchen at night, unpaid bills scattered on the table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le soir, je compte les factures. Loyer en retard. Voiture en panne."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "young man staring at a framed photo of himself as a happy kid, small apartment",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Quand j'étais petit, je me voyais millionnaire. Là, je suis à découvert."
+      }
+     ],
+     "move": "zoom_in_right"
+    },
+    {
+     "visual": "young woman sitting on a sofa smiling softly in a small living room",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu vas trouver, David. Je crois en toi."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man and young woman on a small balcony at sunset, city lights",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Un jour, on aura une maison avec un jardin. Promis ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man looking at a glowing laptop screen in the dark, ad for luxury bedsheets",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Alors j'ai eu une idée. Une idée géniale. Enfin… c'est ce que je croyais."
+      }
+     ],
+     "move": "push"
+    }
+   ],
+   "cover": "Le masseur fauché",
+   "pinned": "Tu savais que cette histoire était vraie ? 👀"
+  },
+  {
+   "n": 2,
+   "title": "L'arnaque des draps",
+   "teaser": "Une annonce qui change tout…",
+   "scenes": [
+    {
+     "visual": "garage filled to the ceiling with plastic-wrapped white bedsheets, cartoon hands on the boxes",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'ai mis toutes mes économies dans des draps en coton égyptien."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man daydreaming, thought bubble of cash raining over a retirement home",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le plan : les revendre aux maisons de retraite de Miami. Elles en achètent des milliers."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man on the phone in a garage full of boxes, determined",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Coton égyptien, mille fils, prix imbattable ! Vous voulez un échantillon ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "retirement home reception desk, stern receptionist woman crossing arms",
+     "chars": [],
+     "lines": [
+      {
+       "s": "directrice",
+       "t": "Des draps ? On a déjà un fournisseur. Au revoir."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV knocking on many doors of retirement homes under hot sun, montage feeling",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Une maison. Puis dix. Puis trente. Personne n'en veut."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "car trunk stuffed with bedsheet boxes in a parking lot at sunset",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je roule avec des draps plein le coffre. Je dors presque dedans."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "bank statement on a table showing a negative balance in red",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mes économies ont disparu. Il me reste des draps. Des milliers de draps."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "banque",
+      "title": "Solde : -1 240 $",
+      "subtitle": "Compte à découvert",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "small apartment living room, young woman standing nervously holding something behind her back",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "David… assieds-toi. Il faut que je te dise un truc."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "close-up of cartoon hand holding a positive pregnancy test with two lines",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deux barres. Elle est enceinte."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "nouvelle",
+      "title": "Je vais être papa",
+      "subtitle": "Et je suis fauché",
+      "color": "purple"
+     }
+    },
+    {
+     "visual": "young man smiling but sweating, hugging young woman in living room",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "david",
+       "t": "C'est… c'est incroyable ! On va y arriver."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young woman smiling with hands on her belly, small living room",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "On va être trois, David. Il faut qu'on soit sérieux maintenant."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man alone on a balcony at night looking at Miami skyline lights",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À l'intérieur, je panique. Il me faut de l'argent. Vite."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "cartoon hand holding a phone showing a message notification on a dark balcony",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ce soir-là, je reçois un message. Un ami d'enfance est mort."
+      }
+     ],
+     "move": "push"
+    }
+   ],
+   "cover": "Il a tout perdu"
+  },
+  {
+   "n": 3,
+   "title": "Le retour d'Efraim",
+   "teaser": "Il vend des armes. À 19 ans.",
+   "scenes": [
+    {
+     "visual": "cemetery on a sunny day, people in black clothes gathered, palm trees",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À l'enterrement, je ne connais presque personne."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "info",
+      "title": "Funérailles",
+      "subtitle": "Miami Beach",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "shiny black luxury sports car arriving on a cemetery road, loud",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et puis une voiture arrive. Beaucoup trop chère pour un enterrement."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "people at a cemetery turning their heads toward a loud car",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Tout le monde se retourne. Les gens chuchotent."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "chubby young man stepping out of a sports car at a cemetery, smiling",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim. Mon meilleur ami quand on avait douze ans."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man opening arms for a hug, cemetery background",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "David ! Mec ! T'as pas changé, toujours la même tête de gentil !"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "two young men sitting on a low wall outside the cemetery, talking",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "david",
+       "t": "T'as l'air de bien t'en sortir… tu fais quoi maintenant ?"
+      }
+     ],
+     "move": "zoom_in_right"
+    },
+    {
+     "visual": "chubby young man lowering sunglasses with a grin, close-up",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Je vends des armes. À l'armée américaine."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV, cartoon hands raised in disbelief, chubby young man laughing",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il a dix-neuf ans. Il a lâché le lycée. Et il vend des armes à l'armée."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man showing photos on his phone of crates and military trucks",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Casques, munitions, gilets. Je fournis l'armée. Le Pentagone, mec."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man showing a stack of cash from his pocket, sunny street",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "C'est légal, mec. Tout est sur internet. Faut juste savoir où chercher."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man walking away to his sports car, waving",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Passe me voir demain. Je vais te montrer comment on devient riche."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man lying awake in bed at night staring at the ceiling, small room",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Cette nuit-là, je ne dors pas. Je pense à cette voiture. À cet argent."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man alone on the sidewalk looking at a business card that says AEY",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sur la carte, trois lettres : A.E.Y. Je ne le sais pas encore, mais ma vie vient de basculer."
+      }
+     ],
+     "move": "push"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Les miettes du Pentagone",
+   "teaser": "Une offre impossible à refuser.",
+   "scenes": [
+    {
+     "visual": "small cluttered apartment turned office, computers, phones, piles of papers, cereal boxes",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lendemain, je débarque chez Efraim. Son bureau, c'est son appartement."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "computer screen showing a government website with long lists of contracts, glowing",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Regarde. Le gouvernement publie tous ses besoins ici. Tout le monde peut répondre."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man pointing at a screen excitedly",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Des balles, des casques, des jumelles, des pièces de char. Des milliers d'appels d'offres."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "chubby young man scrolling a list of contracts with dollar amounts",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Cinquante mille, deux cent mille, un million. Faut juste être le moins cher."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "cartoon illustration of giant corporate buildings eating big cakes while a small man picks crumbs",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Les géants prennent les gros contrats. Moi, je ramasse les miettes."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "chubby young man leaning back in chair with feet on desk, laughing",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Mais les miettes du Pentagone, mec… ça fait des millions."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "chiffre",
+      "title": "Des millions de $",
+      "subtitle": "Juste avec les petits contrats",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "POV looking at a calculator and price lists on a desk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Son astuce : trouver le matériel moins cher que tout le monde, et prendre une marge."
+      }
+     ],
+     "move": "zoom_in_left"
+    },
+    {
+     "visual": "chubby young man pointing at a calendar full of red circles",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "La guerre en Irak, en Afghanistan… l'armée a besoin de tout. Tout le temps."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man on the phone yelling, veins showing, comedic",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Non, non, non ! Ton prix est une insulte ! Rappelle-moi quand t'es sérieux !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man hanging up and smiling calmly at the viewer",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "J'ai besoin de quelqu'un de confiance. Soixante-dix mille par an. Tu commences lundi ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV cartoon hands holding a tiny massage oil bottle next to a stack of cash",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Masser des vieux grincheux… ou vendre des casques à l'armée ?"
+      }
+     ],
+     "move": "zoom_in_left"
+    },
+    {
+     "visual": "POV cartoon hand hesitating above another hand offered for a handshake",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Soixante-dix mille. Plus que tout ce que j'ai jamais gagné."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "two cartoon hands shaking firmly, office background",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Lundi. J'y serai."
+      }
+     ],
+     "move": "push"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Le premier mensonge",
+   "teaser": "Un contrat qui sent le danger.",
+   "scenes": [
+    {
+     "visual": "cozy small living room at night, young woman with a cup of tea looking suspicious",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu vas bosser avec Efraim ? Il fait quoi exactement ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hands fidgeting, nervous",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Elle déteste les armes. Elle manifeste contre la guerre."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man smiling awkwardly, scratching his head",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Euh… des fournitures. Pour l'armée. Des draps, des trucs comme ça."
+      }
+     ],
+     "move": "zoom_in_right"
+    },
+    {
+     "visual": "young woman smiling relieved, hugging a pillow",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Des draps ? Bon… au moins tu t'y connais !"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man walking into an office building at sunrise holding coffee",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lundi, je mets ma seule chemise. Je suis officiellement dans les affaires."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young man looking at camera guiltily with a forced smile",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Premier mensonge. Le premier d'une très longue liste."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "busy tiny office, two desks, phones ringing, sticky notes everywhere",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Au bureau, j'apprends vite. Les appels, les prix, les fournisseurs."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man jumping with joy holding a printed paper",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On l'a ! Le contrat des casques ! Dix mille casques pour l'armée !"
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "contrat gagné",
+      "title": "10 000 casques",
+      "subtitle": "Premier gros coup",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "POV cartoon hands typing an email on a keyboard, coffee cup",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je négocie avec des usines en Chine, en Israël, en Bulgarie. Moi, le masseur."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "two young men high-fiving in the small office, confetti of papers",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ma première commission. Je paie le loyer. J'achète un berceau."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "chubby young man staring seriously at a computer screen, red glow",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Attends… regarde ça. Un contrat pour l'Irak."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man buying flowers at a street stand for his girlfriend, happy",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je rentre avec des fleurs. Léa sourit. Tout va bien… pour l'instant."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "computer screen with a map of Iraq and a big red stamp URGENT",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Des pistolets pour la police irakienne. Le genre de contrat que personne n'ose prendre."
+      }
+     ],
+     "move": "zoom_in"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Le contrat irakien",
+   "teaser": "Les armes sont bloquées…",
+   "scenes": [
+    {
+     "visual": "chubby young man typing fast on a keyboard at night, energy drink cans",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim casse les prix. Il propose moins cher que tout le monde."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "cartoon hand holding a printed email with a green checkmark, office",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Trois semaines plus tard, l'email tombe. On a gagné."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "contrat gagné",
+      "title": "Irak",
+      "subtitle": "Pistolets pour la police",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "two young men celebrating with champagne bottle in tiny office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On est des marchands d'armes, mec ! De vrais marchands d'armes !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man dancing on an office chair, comedic",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim danse sur son bureau. Moi, je regarde la carte de l'Irak."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "a world map with an arrow from Italy to Jordan to Iraq, cargo icons",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les pistolets viennent d'Italie. Ils doivent passer par la Jordanie, puis l'Irak."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "chubby young man on the phone, face turning pale",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Comment ça bloqués ? Bloqués où ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "cargo crates stuck behind a fence at a dusty customs depot, red tape",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "En Jordanie. Les caisses sont coincées à la douane. Personne ne veut les livrer."
+      }
+     ],
+     "move": "zoom_out",
+     "banner": {
+      "label": "alerte",
+      "title": "Livraison bloquée",
+      "subtitle": "Douane d'Amman",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man on the phone with a worried face, office",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Ils disent que c'est un problème d'embargo. Personne ne veut toucher à ces caisses."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man pacing in the office, holding his head",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Si on livre pas, on perd tout. Et le gouvernement nous blackliste à vie."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man stopping and turning to the viewer with a crazy idea face",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Il faut que quelqu'un aille là-bas. Toi et moi."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV cartoon hands up in protest",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "En Irak ? T'es malade ! Ma copine est enceinte !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "young man looking at a photo of his pregnant girlfriend on his desk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je pense à Léa. Au bébé. À la commission. Et je dis oui."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man holding two plane tickets and grinning",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Pense à la commission. Pense au bébé. Le vol est demain."
+      }
+     ],
+     "move": "static"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Direction Amman",
+   "teaser": "Le vrai voyage commence.",
+   "scenes": [
+    {
+     "visual": "young woman at a doorway with sad eyes, suitcase on the floor",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Un salon professionnel à Miami pendant cinq jours ? Bon… appelle-moi."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hands pulling a suitcase, closing apartment door",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deuxième mensonge. Je lui dis que je pars à un salon. Je pars au Moyen-Orient."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "airplane window view of desert at sunrise",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Douze heures de vol. Efraim dort comme un bébé. Moi, je ne ferme pas l'œil."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "passport being stamped at an airport counter, cartoon hand",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Tampon sur le passeport. Il n'y a plus de retour en arrière."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "bustling hot city street in Amman with cream stone buildings, taxis, markets",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Amman. Quarante degrés. Je ne comprends rien, je ne connais personne."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "localisation",
+      "title": "Amman, Jordanie",
+      "subtitle": "Quarante degrés à l'ombre",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "chubby young man in a white tracksuit sweating in the sun, sunglasses",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Détends-toi ! On récupère les caisses et on rentre milliardaires."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "dusty customs office, stacks of paper, officer behind a desk with stamps",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Au dépôt de la douane, on attend. Des heures. Des papiers. Encore des papiers."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man arguing with a street seller over a keffiyeh, market",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Combien ? Non, c'est trop cher ! Je suis un pro de la négo, mec."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "customs officer finally stamping a paper with a big stamp",
+     "chars": [],
+     "lines": [
+      {
+       "s": "douanier",
+       "t": "C'est bon. Vous pouvez prendre vos caisses."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "old white truck loaded with wooden crates in a dusty yard",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On a un camion. Un chauffeur. Et deux cents kilomètres de désert à traverser."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "map with a red route through the desert labeled danger zone",
+     "chars": [],
+     "lines": [
+      {
+       "s": "chauffeur",
+       "t": "La route passe par le triangle. Personne ne roule là-bas la nuit."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "danger",
+      "title": "Zone rouge",
+      "subtitle": "Route la plus dangereuse du pays",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "old driver with grey beard smoking next to a truck, serious face",
+     "chars": [],
+     "lines": [
+      {
+       "s": "chauffeur",
+       "t": "Je conduis. Mais si quelqu'un nous arrête, vous ne dites rien."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "truck driving onto a desert highway at sunset, POV from passenger seat",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il est dix-neuf heures. On part quand même."
+      }
+     ],
+     "move": "run"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "La route de la mort",
+   "teaser": "Des phares dans le rétro…",
+   "scenes": [
+    {
+     "visual": "POV from truck passenger seat, empty desert highway at night, headlights",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La nuit tombe d'un coup. Plus de lampadaires. Juste nos phares."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "burned car wreck on the roadside in the desert night",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sur le bord de la route, des carcasses de voitures brûlées."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "POV looking at a tiny glowing phone with no signal in a truck cabin",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Plus de réseau. Si quelque chose arrive, personne ne le saura."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man in the truck cabin, no longer smiling, gripping the seat",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Euh… c'est normal, ça ?"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "night checkpoint with barrels and armed men with flashlights in the desert",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un barrage. Des hommes armés nous font signe de nous arrêter."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "alerte",
+      "title": "Barrage",
+      "subtitle": "Hommes armés",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "flashlight beam pointing into the truck cabin, POV hands raised",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "On livre du matériel pour l'armée américaine ! On a les papiers !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "POV cartoon hands holding trembling papers in a flashlight beam",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mes mains tremblent tellement que les papiers font du bruit."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "armed man looking at papers with a flashlight, suspicious",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il regarde les papiers. Longtemps. Trop longtemps."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "armed man waving the truck through the checkpoint",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Puis il nous fait signe de passer. Je respire enfin."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "rear view mirror showing two pairs of headlights approaching on dark road",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Dix minutes plus tard, deux voitures apparaissent dans le rétro."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man laughing with relief in the truck cabin, then frozen",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On est trop forts ! Personne ne peut nous arrêter !"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "driver shouting and pressing the gas pedal, truck cabin",
+     "chars": [],
+     "lines": [
+      {
+       "s": "chauffeur",
+       "t": "Accrochez-vous ! Ils nous suivent depuis le barrage !"
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "POV truck speeding on a desert road at night, sparks and dust",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le camion accélère. Les phares se rapprochent."
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "danger",
+      "title": "Poursuite",
+      "subtitle": "Ils se rapprochent",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Poursuite dans le désert",
+   "teaser": "Livrés à temps ?",
+   "scenes": [
+    {
+     "visual": "night desert road, truck shaking violently, headlights behind",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le camion tremble. Les caisses claquent derrière nous."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man screaming in the truck cabin, sunglasses crooked",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Plus vite ! Plus vite ! Je veux pas mourir à dix-neuf ans !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "distant flashes of gunfire in the dark desert behind a truck",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On entend des coups de feu au loin. Je me baisse sous le tableau de bord."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "truck swerving off the road onto a dirt track between dunes",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le chauffeur tourne brusquement. Une piste de terre, sans phares."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "POV cartoon hands holding a flashlight turned off in the dark truck cabin",
+     "chars": [],
+     "lines": [
+      {
+       "s": "chauffeur",
+       "t": "Pas un bruit. Pas une lumière. Rien."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "total darkness in the desert, only faint moonlight on dunes, truck stopped",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On coupe le moteur. Silence total. On ne bouge plus."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "headlights passing on the distant road beyond the dunes",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les deux voitures passent sur la route… et disparaissent."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man laughing nervously in the dark cabin",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Je te l'avais dit… tranquille. Super tranquille."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man looking at the sky full of stars through the truck windshield",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je pense à Léa. Je me jure que si je survis, j'arrête tout."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "sunrise over the desert, a fortified military base with walls and flags ahead",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À l'aube, on aperçoit enfin la base américaine."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "arrivée",
+      "title": "Base américaine",
+      "subtitle": "6 h 12 du matin",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "american soldier at the gate looking surprised at the truck",
+     "chars": [
+      "soldat"
+     ],
+     "lines": [
+      {
+       "s": "soldat",
+       "t": "Attendez… c'est vous, la livraison de pistolets ? On vous attendait plus !"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "officer signing a delivery receipt on a clipboard at the military base",
+     "chars": [
+      "soldat"
+     ],
+     "lines": [
+      {
+       "s": "soldat",
+       "t": "Signé. Livraison complète. Vous êtes fous, les gars."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "soldiers unloading wooden crates from the truck at the base",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On a livré. À l'heure. Je ne sais pas encore que je viens de devenir accro."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "L'argent coule",
+   "teaser": "Léa trouve quelque chose…",
+   "scenes": [
+    {
+     "visual": "airplane landing at Miami with palm trees and sunny sky",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Retour à Miami. Le virement du gouvernement tombe."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "bank app on a phone showing a huge balance, cartoon hand holding it",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ma commission. Plus que deux ans de massages."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "virement reçu",
+      "title": "+ 75 000 $",
+      "subtitle": "Paiement du gouvernement",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "modern glass office in a Miami tower with a view of the ocean",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim loue de vrais bureaux. Vue sur la mer. Un logo AEY sur la porte."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man throwing cash in the air in a new office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Bienvenue dans la cour des grands, partenaire !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man buying a shiny red sports car at a dealership",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim s'offre une deuxième voiture de sport. Puis une troisième."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man buying a crib and baby clothes in a store, smiling",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'achète tout pour le bébé. Je respire enfin."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man and young woman at a baby store choosing a stroller, happy",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu vois ? Les fournitures, ça paie bien finalement !"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "apartment at night, young woman holding a phone showing desert photos, angry",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mais un soir, Léa tombe sur les photos de mon téléphone."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "close-up of phone screen showing a selfie in front of a military truck in the desert",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "C'est quoi, ça ? C'est pas Miami, David."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hands opening in defense in the living room",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Je peux t'expliquer… c'était juste une livraison."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "young woman crying in anger pointing at the door",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu m'as menti. Tu vends des armes. Tu es allé en Irak !"
+      }
+     ],
+     "move": "static",
+     "banner": {
+      "label": "dispute",
+      "title": "Elle sait tout",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man looking at himself in a dark mirror, guilty face",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je pourrais tout arrêter là. Mais Efraim m'appelle le lendemain."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man alone on the sofa, door slammed, dark room",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je lui promets que c'est fini. Encore un mensonge."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ],
+   "pinned": "Tu lui aurais dit la vérité dès le début ? 🤔"
+  },
+  {
+   "n": 11,
+   "title": "L'investisseur",
+   "teaser": "Un salon très spécial à Las Vegas…",
+   "scenes": [
+    {
+     "visual": "modern Miami office with ocean view, chubby young man at a big desk",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Écoute-moi. Les petits contrats, c'est fini. On vise les gros."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hands on a desk with a contract list showing huge dollar amounts",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le problème : pour les gros contrats, il faut avancer des millions. On ne les a pas."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "old bald man in a beige suit entering the office, calm smile",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "C'est là qu'arrive Ralph. Un homme d'affaires discret, venu de l'Utah."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "old bald man sitting down and folding his hands, office",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "ralph",
+       "t": "Je finance. Vous gagnez les contrats. On partage les bénéfices. Simple."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man nodding very fast with big eyes",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Ralph, vous êtes mon nouveau meilleur ami."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "cartoon hands signing a contract with a golden pen",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Avec l'argent de Ralph, AEY passe à la vitesse supérieure."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "financement",
+      "title": "Investisseur trouvé",
+      "subtitle": "Des millions sur la table",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "office filling with new employees at desks, phones ringing",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On embauche. Des vendeurs, des comptables. Le bureau ne dort plus."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man shouting at an employee on the phone, comedic anger",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Si t'appelles ça négocier, retourne vendre des glaces !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "POV looking at a wall chart with a rocket-shaped growth curve",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "En quelques mois, AEY remporte des dizaines de contrats."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "young man at home holding a newborn baby wrapped in a blanket, soft light",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et ma fille naît. La plus belle chose qui me soit arrivée."
+      }
+     ],
+     "move": "zoom_in",
+     "banner": {
+      "label": "bonne nouvelle",
+      "title": "C'est une fille",
+      "subtitle": "",
+      "color": "purple"
+     }
+    },
+    {
+     "visual": "young woman smiling tired in a hospital bed holding the baby",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Promets-moi d'être là pour elle. Vraiment là."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man looking at his phone buzzing with a message from Efraim",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lendemain, Efraim m'envoie un billet d'avion. Destination : Las Vegas."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "Las Vegas strip at night with neon lights, seen from a taxi window",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Le plus grand salon d'armes du monde, mec. C'est là que tout se joue."
+      }
+     ],
+     "move": "run"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "title": "Le salon des armes",
+   "teaser": "Un homme en noir les observe.",
+   "scenes": [
+    {
+     "visual": "huge convention hall full of tanks, drones and weapon stands, crowds in suits",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Las Vegas. Un salon géant. Des chars, des drones, des mitrailleuses partout."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "localisation",
+      "title": "Las Vegas",
+      "subtitle": "Salon international de l'armement",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "chubby young man taking selfies in front of a tank, excited",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Regarde ce bébé ! Je veux le même dans mon garage !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "businessmen in suits handing out brochures at a stand with missiles",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ici, tout le monde vend la guerre avec un grand sourire."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "young man looking uncomfortable among stands showing rifles",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Moi, je me sens tout petit. Un ancien masseur au milieu des généraux."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "big banner screen at the convention announcing a giant government contract",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mais tout le monde ne parle que d'une chose : un contrat énorme pour l'Afghanistan."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man with greedy eyes reading a brochure",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Équiper toute l'armée afghane. Des centaines de millions. C'est pour nous."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV hands on hips, crowded convention hall",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Efraim, on est deux gamins de Miami. On n'a aucune chance."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "tall thin older man in a black coat watching from a distance in the crowd",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "C'est là que je le remarque. Un homme en noir qui nous fixe depuis une heure."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "tall thin older man approaching slowly through the crowd",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il s'approche. Les gens s'écartent sans même le regarder."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "tall thin older man leaning in close, serious face, convention hall",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Vous êtes ceux d'AEY. Les petits rapides. J'ai entendu parler de vous."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man puffing his chest proudly",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Ouais, c'est nous. Et vous, vous êtes qui ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "tall thin older man handing over a black card with no name",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Quelqu'un qui peut vous trouver tout ce que vous voulez. Ce soir, minuit."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "black business card with only a hotel room number in gold",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sur la carte, juste un numéro de chambre. Pas de nom."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "mystère",
+      "title": "Minuit",
+      "subtitle": "Chambre 2207",
+      "color": "black"
+     }
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "title": "Le Fantôme",
+   "teaser": "Une proposition dangereuse.",
+   "scenes": [
+    {
+     "visual": "dim luxury hotel corridor at midnight, POV walking toward a door",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Minuit. Le couloir de l'hôtel est vide. Mon cœur bat trop fort."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "door opening onto a dark hotel suite with city lights behind",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La porte s'ouvre avant même qu'on frappe."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "tall thin older man sitting in an armchair in a dark suite, whisky glass",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Asseyez-vous. Je m'appelle Klaus. Mais dans le métier, on dit le Fantôme."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man whispering to the viewer in the dark room",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Le Fantôme… mec, il est sur une liste noire, je l'ai lu quelque part."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "tall thin older man smiling coldly, lighting a cigar",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "C'est exact. Le gouvernement américain ne veut plus traiter avec moi."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "tall thin older man pointing at the two young men",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Mais avec vous, il traite. Vous êtes jeunes, propres, américains."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV looking at a map spread on a hotel table with red circles over Eastern Europe",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le deal : il trouve les armes, on signe les contrats. Il prend sa part."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "chubby young man rubbing his hands with a huge grin",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Vous êtes en train de me dire que vous pouvez fournir l'Afghanistan ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "tall thin older man nodding slowly, smoke around him",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Je peux fournir n'importe quel pays. Tant qu'on ne pose pas trop de questions."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV hands gripping the armrest of a chair nervously",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je sens que c'est une très mauvaise idée. Et pourtant…"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man shaking hands with the tall thin man over the map",
+     "chars": [
+      "efraim",
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim lui serre la main. Moi, je ne dis rien."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "tall thin older man at the window looking at the Las Vegas lights",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Une dernière chose. Ne me doublez jamais. Ceux qui l'ont fait ne sont plus là."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "avertissement",
+      "title": "Ne jamais le doubler",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "hotel elevator doors closing on the two young men, silent",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Dans l'ascenseur, Efraim rit. Moi, j'ai froid."
+      }
+     ],
+     "move": "static"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "title": "Le contrat du siècle",
+   "teaser": "Où trouver 100 millions de cartouches ?",
+   "scenes": [
+    {
+     "visual": "Miami office at night, papers everywhere, two young men working",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Retour à Miami. On se met sur le contrat afghan jour et nuit."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "thick government document with a big title AFGHANISTAN on a desk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le document fait des centaines de pages. Et la liste fait peur."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV cartoon hand running a finger down a long list of ammunition",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Fusils, grenades, roquettes… et surtout des munitions. Des montagnes de munitions."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "big glowing number on a screen showing one hundred million",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Plus de cent millions de cartouches. Pour des fusils russes."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "objectif",
+      "title": "100 000 000",
+      "subtitle": "cartouches à trouver",
+      "color": "orange"
+     }
+    },
+    {
+     "visual": "chubby young man pacing with phone in hand, frustrated",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Personne n'a autant de stock ! Personne au monde !"
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "POV looking at a laptop with emails all saying no",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On appelle des usines partout. Réponse : impossible, trop gros, trop vite."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "phone ringing on a desk at three in the morning, dark office",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et puis, à trois heures du matin, le téléphone sonne."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "tall thin older man on a video call on a laptop screen, dark background",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Albanie. Les communistes ont stocké des munitions pendant quarante ans."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "illustration of mountains with hidden bunkers full of crates",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Des centaines de millions de cartouches qui dorment. Et ils veulent s'en débarrasser."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "chubby young man frozen with his mouth wide open, office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Combien ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "tall thin older man smiling on the laptop screen",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Presque rien. Quelques centimes la cartouche."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man doing a calculation on a calculator, eyes turning into dollar signs",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim calcule. Ses yeux brillent comme jamais."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hands holding a coffee, sunrise over Miami through the office window",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On travaille jusqu'à l'aube. Notre offre part avant la date limite. Il reste à attendre."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "title": "300 millions",
+   "teaser": "Il faut aller en Albanie.",
+   "scenes": [
+    {
+     "visual": "two young men sitting nervously in front of a computer, office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Des semaines à attendre. Efraim rafraîchit ses emails toutes les deux minutes."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man biting his nails at a desk",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Et si on perd ? On a misé tout ce qu'on a sur ce contrat."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "computer screen with a new email notification from the US Army",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et puis un matin, l'email arrive."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV cartoon hands holding a printed letter with an official eagle seal",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le Pentagone a choisi AEY."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "giant golden numbers floating in the office with confetti",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un contrat de près de trois cents millions de dollars."
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "contrat gagné",
+      "title": "298 000 000 $",
+      "subtitle": "Armée afghane",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "chubby young man screaming with joy and jumping on a desk",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On est riches ! On est riches, mec ! Trois cents millions !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "office employees cheering and spraying champagne",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Tout le bureau hurle. Le champagne coule sur les ordinateurs."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young man standing still in the middle of the party, thoughtful",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'ai vingt-trois ans. Je viens de devenir un des plus gros fournisseurs de l'armée."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "old bald man in a beige suit raising a glass calmly",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "ralph",
+       "t": "Bravo, les garçons. Maintenant, il faut livrer."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man calming down and looking serious at the viewer",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Il faut que quelqu'un aille en Albanie vérifier la marchandise."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV hands pointing at own chest",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Laisse-moi deviner… moi."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young woman holding a baby at the apartment door, disappointed",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Encore un voyage ? Elle a trois mois, David."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "airplane flying over snowy mountains toward the Balkans",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je pars quand même. Direction Tirana."
+      }
+     ],
+     "move": "pan_up",
+     "banner": {
+      "label": "départ",
+      "title": "Tirana, Albanie",
+      "subtitle": "",
+      "color": "blue"
+     }
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "title": "Tirana",
+   "teaser": "Ce qu'il y a dans les caisses…",
+   "scenes": [
+    {
+     "visual": "busy colorful city street in Tirana with painted buildings and old cars",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "L'Albanie. Des immeubles peints de toutes les couleurs. Des vieilles Mercedes partout."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "localisation",
+      "title": "Tirana",
+      "subtitle": "Albanie, 2007",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "small concrete bunkers dotted along a green hillside",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sur les collines, des milliers de petits bunkers. Souvenirs de la guerre froide."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "middle-aged man with a thick mustache and flat cap waving next to an old car",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Monsieur David ! Bienvenue ! Je suis Arben, je m'occupe de tout ici."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV from the passenger seat of an old car on a mountain road",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il conduit comme un fou dans les montagnes. Je m'accroche à la portière."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "middle-aged man laughing while driving, mountain road",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Ici, les règles de la route, ce sont des suggestions !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "huge military warehouse in the mountains with rusty gates and guards",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Après deux heures, un énorme entrepôt militaire, gardé par des soldats."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "rusty heavy doors opening slowly, light flooding into a dark warehouse",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les portes s'ouvrent dans un grincement."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "endless rows of stacked wooden crates up to the ceiling in a giant warehouse",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Des caisses. À perte de vue. Du sol au plafond."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "stock",
+      "title": "Des millions",
+      "subtitle": "de cartouches",
+      "color": "orange"
+     }
+    },
+    {
+     "visual": "middle-aged man spreading his arms proudly in the warehouse",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Quarante ans de stock. Tout est à vous, si vous payez."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV cartoon hands prying open a dusty wooden crate with a crowbar",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'ouvre une caisse au hasard. Pour vérifier."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "old cartridges inside the crate wrapped in paper with foreign red symbols",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les cartouches sont vieilles, mais en bon état."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "close-up of crate lid with red Chinese characters stamped on it",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Puis je vois les inscriptions sur le couvercle. Des caractères chinois."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man frozen in the dark warehouse, flashlight in hand",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mon sang se glace. Ces munitions ont été fabriquées en Chine."
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "alerte",
+      "title": "Made in China",
+      "subtitle": "Interdit par le contrat",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "title": "L'embargo",
+   "teaser": "La solution d'Efraim est pire que le problème.",
+   "scenes": [
+    {
+     "visual": "young man on the phone pacing in the warehouse among crates",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Efraim, elles sont chinoises. Toutes. On ne peut pas les vendre."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "split screen style, chubby young man on phone in Miami office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Et alors ? Une balle, c'est une balle."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "illustration of a document with a red stamp EMBARGO over a Chinese flag silhouette",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Non. La loi américaine interdit d'acheter des armes chinoises. C'est écrit dans le contrat."
+      }
+     ],
+     "move": "zoom_in",
+     "banner": {
+      "label": "loi",
+      "title": "Embargo",
+      "subtitle": "Armes chinoises interdites",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "chubby young man silent on the phone, thinking hard",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Silence au bout du fil. Long silence."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man smiling slowly with a dangerous idea",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Personne ne doit savoir qu'elles sont chinoises. C'est tout."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV hand holding phone away from ear, shocked",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Tu veux dire… mentir à l'armée américaine ?"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man explaining with hands, office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On enlève les vieilles caisses. On met tout dans des cartons neufs. Sans marque."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "middle-aged man with mustache listening and nodding in the warehouse",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Je connais une usine. Des ouvriers. Ils peuvent faire ça vite."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV looking at mountains of crates, overwhelming",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Cent millions de cartouches. À déballer et remballer. À la main."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "young man sitting alone on a crate, head in hands",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je sais que c'est mal. Je le sais au fond de moi."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "chubby young man on the phone, voice cold",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Si on livre pas, on perd tout. Ta fille aussi, elle perd tout."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV cartoon hand slowly closing a flip phone",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je raccroche. Et je dis à Arben de commencer."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "factory gates opening at dawn with workers arriving",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lendemain, l'usine tourne déjà."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "début",
+      "title": "Opération cartons",
+      "subtitle": "Jour 1",
+      "color": "black"
+     }
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "title": "L'usine à cartons",
+   "teaser": "Quelqu'un prend des photos…",
+   "scenes": [
+    {
+     "visual": "old factory hall with dozens of workers at long tables unpacking cartridges",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Une vieille usine. Des dizaines d'ouvriers. Des tables à perte de vue."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "workers' hands taking cartridges out of old paper wrappings",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ils sortent les cartouches des vieux emballages, une par une."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "piles of broken wooden crates with Chinese markings being thrown on a heap",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les caisses chinoises finissent en tas. On les brûle le soir."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "new plain brown cardboard boxes being taped and stacked",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Puis tout part dans des cartons neufs. Aucune marque. Aucune origine."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "middle-aged man with mustache supervising, shouting instructions",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Plus vite ! Le camion part à six heures !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "big counter display showing millions of cartridges done",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Jour après jour, le compteur monte. Dix millions. Vingt millions."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "progression",
+      "title": "23 000 000",
+      "subtitle": "cartouches remballées",
+      "color": "orange"
+     }
+    },
+    {
+     "visual": "young man exhausted sleeping on cardboard boxes in a corner of the factory",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je dors dans l'usine. Je mange des sandwichs froids."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man on a video call with a crying baby on a laptop screen",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Elle a dit son premier mot aujourd'hui. Tu n'étais pas là."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV looking at the laptop screen going dark",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La connexion coupe. Je reste devant l'écran noir."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "factory window at night, a shadowy figure outside taking photos with a camera",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Cette nuit-là, je vois quelqu'un dehors. Il photographie l'usine."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man running outside the factory into the night, empty parking",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Hé ! Vous êtes qui ?!"
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "empty dark road with a car speeding away, tail lights",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La voiture démarre et disparaît."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "middle-aged man with mustache looking worried at the factory door",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Ce n'est pas bon, monsieur David. Pas bon du tout."
+      }
+     ],
+     "move": "zoom_in",
+     "banner": {
+      "label": "alerte",
+      "title": "On nous surveille",
+      "subtitle": "",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "title": "Les marges",
+   "teaser": "Efraim veut doubler le Fantôme.",
+   "scenes": [
+    {
+     "visual": "Miami office at night, chubby young man staring at spreadsheets",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À Miami, Efraim épluche les comptes."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "spreadsheet on screen with highlighted numbers in red and green",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il découvre combien le Fantôme et ses intermédiaires prennent sur chaque cartouche."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "chubby young man slamming the desk angrily",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Ils se gavent sur notre dos ! C'est NOTRE contrat !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "young man arriving at the Miami office with a suitcase, tired",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je rentre d'Albanie, épuisé. Efraim m'attend avec un sourire bizarre."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man whispering conspiratorially, office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "On va traiter directement avec les Albanais. Sans le Fantôme."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV hands raised in alarm",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "T'es malade ? Tu te souviens de ce qu'il a dit ? Ne jamais le doubler !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man shrugging, feet on the desk",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "C'est un vieux qui fait peur aux enfants. Nous, on est le futur."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "old bald man in a beige suit looking concerned in the office doorway",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "ralph",
+       "t": "Efraim, ce genre d'homme a une longue mémoire."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man waving his hand dismissively",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Ralph, t'es là pour payer. Pas pour penser."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV looking at an email being sent on screen",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le soir même, Efraim envoie un email aux Albanais. Le Fantôme est écarté."
+      }
+     ],
+     "move": "zoom_in",
+     "banner": {
+      "label": "trahison",
+      "title": "Le Fantôme est écarté",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man driving home at night through Miami streets",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sur la route, je regarde mes rétros tout le temps."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "young man entering a dark apartment, girlfriend asleep with baby",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À la maison, tout le monde dort. Je vérifie deux fois la serrure."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "phone screen lighting up in the dark with unknown number calling",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À quatre heures du matin, mon téléphone sonne. Numéro masqué."
+      }
+     ],
+     "move": "push"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "title": "L'appel",
+   "teaser": "La livraison tourne mal.",
+   "scenes": [
+    {
+     "visual": "POV cartoon hand holding a buzzing phone in a dark bedroom",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Allô ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "dark silhouette of a tall thin man on the phone in shadows",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Tu sais qui je suis. Dis à ton ami que j'ai bien reçu son message."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man sitting on the edge of the bed in the dark, sweating",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Moi, je n'oublie jamais. Bonne nuit, David."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "menace",
+      "title": "Numéro masqué",
+      "subtitle": "4 h 02",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man staring at sleeping girlfriend and baby crib in the dark",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il raccroche. Je regarde ma fille dormir. Je ne dors plus."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "Miami office in the morning, young man rushing in",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Efraim, il m'a appelé. Le Fantôme. Chez moi !"
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man laughing with coffee in hand",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Il bluffe. Il ne peut rien faire. On est protégés, on travaille pour l'armée !"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "cargo plane being loaded with brown boxes at an airport at night",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Pendant ce temps, les premiers avions partent pour Kaboul."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "military warehouse in Afghanistan with soldiers opening cardboard boxes",
+     "chars": [
+      "soldat"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "En Afghanistan, les soldats ouvrent les cartons."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "soldier holding a crumbling old cardboard box with spilled cartridges",
+     "chars": [
+      "soldat"
+     ],
+     "lines": [
+      {
+       "s": "soldat",
+       "t": "C'est quoi ça ? Les cartons tombent en morceaux. Les balles sont vieilles."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "some cartridges looking corroded and dirty on a table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Certaines cartouches ont plus de quarante ans. Des rapports remontent."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man on the phone with an army officer, fake smile",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Un petit souci de transport, mon colonel. Tout est conforme, je vous assure."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man watching Efraim lie on the phone, office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il ment avec une facilité qui me fait peur."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "official letter on a desk with US Army header and the word INSPECTION",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lendemain, une lettre arrive. L'armée envoie des inspecteurs."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "alerte",
+      "title": "Inspection",
+      "subtitle": "Armée américaine",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "title": "Les inspecteurs",
+   "teaser": "Efraim perd le contrôle.",
+   "scenes": [
+    {
+     "visual": "two serious inspectors in suits entering the Miami office with briefcases",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deux inspecteurs débarquent au bureau. Costumes gris, visages fermés."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "inspector asking questions with a notebook, office",
+     "chars": [],
+     "lines": [
+      {
+       "s": "agent",
+       "t": "D'où viennent exactement ces munitions, monsieur ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man smiling too wide, sweating slightly",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "De Hongrie. Enfin… d'Europe de l'Est. Une usine très moderne."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV hands hidden under the desk, clenched",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il improvise. Je serre les poings sous le bureau."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "inspector writing slowly in a notebook, close-up",
+     "chars": [],
+     "lines": [
+      {
+       "s": "agent",
+       "t": "Très bien. Nous vérifierons."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "inspectors leaving the office, door closing",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ils repartent. Efraim éclate de rire."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "chubby young man jumping on a sofa, laughing loudly",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "T'as vu ? Ils ne savent rien ! On est intouchables !"
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "illusion",
+      "title": "Intouchables ?",
+      "subtitle": "",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "chubby young man buying luxury watches and throwing money at a nightclub",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les semaines suivantes, Efraim devient incontrôlable. Fêtes, voitures, montres."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man yelling at employees who look scared",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Vous êtes tous des incapables ! Sans moi vous n'êtes rien !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "employees leaving the office with boxes of their belongings",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les employés démissionnent un par un."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "young man looking at Efraim through a glass wall, worried",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ce n'est plus mon ami d'enfance. C'est quelqu'un d'autre."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man finding a document on the printer, curious",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un soir, je tombe sur un document oublié dans l'imprimante."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "close-up of a contract page with David's name crossed out",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "C'est notre contrat d'associés. Et mon nom a été modifié."
+      }
+     ],
+     "move": "zoom_in",
+     "banner": {
+      "label": "découverte",
+      "title": "Contrat modifié",
+      "subtitle": "",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "title": "La trahison",
+   "teaser": "David claque la porte.",
+   "scenes": [
+    {
+     "visual": "POV cartoon hands holding a contract with highlighted lines",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je relis trois fois. Ma part a été divisée. Sans me prévenir."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man storming into Efraim's office holding the paper",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "C'est quoi ça ? Tu m'as volé ma part ?"
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man leaning back in a leather chair, calm and cold",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "C'est moi qui ai créé AEY. Toi, tu étais masseur. Rappelle-toi d'où tu viens."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV hands slamming the paper on the desk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "J'ai traversé le désert pour toi ! J'ai vécu dans une usine en Albanie !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man shrugging with a smirk",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Et t'as été payé. Merci, au revoir."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man standing frozen, office suddenly silent",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le bureau devient silencieux. Tout le monde nous regarde."
+      }
+     ],
+     "move": "static",
+     "banner": {
+      "label": "rupture",
+      "title": "Fin de l'amitié",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man taking his things from a desk into a cardboard box",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je prends mes affaires. Un carton. Comme à l'usine."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man turning back at the door, pointing",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Tu me dois des millions, Efraim. Je les aurai."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man laughing alone in his big office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Attaque-moi en justice ! Avec quel argent ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man walking alone on Miami beach at sunset with the box",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je marche sur la plage avec mon carton. J'ai tout perdu. Encore."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young woman opening the door of the apartment, surprised",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Qu'est-ce qui s'est passé ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man sitting at the kitchen table, telling the truth, girlfriend listening",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ce soir-là, je lui raconte tout. L'Irak. L'Albanie. Les cartons. Tout."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young woman quiet, holding his hand across the table",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Merci de m'avoir enfin dit la vérité."
+      }
+     ],
+     "move": "zoom_in"
+    }
+   ],
+   "pinned": "Toi, tu aurais claqué la porte ou gardé le silence ? 👇"
+  },
+  {
+   "n": 23,
+   "title": "Le chantage",
+   "teaser": "Une terrible nouvelle d'Albanie.",
+   "scenes": [
+    {
+     "visual": "young man sitting with a lawyer in a small office with law books",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je vais voir un avocat. Je veux mon argent."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "lawyer shaking his head behind a desk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "avocat",
+       "t": "Un procès contre AEY ? Ça peut prendre des années, et ça coûte une fortune."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man in a car at night thinking hard, rain on the windshield",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Alors je fais quelque chose de stupide."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man on the phone in a parking lot, angry",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Efraim, paie-moi. Ou je raconte tout. Les cartons, les caisses chinoises."
+      }
+     ],
+     "move": "shake",
+     "banner": {
+      "label": "ultimatum",
+      "title": "Paie-moi",
+      "subtitle": "Ou je parle",
+      "color": "orange"
+     }
+    },
+    {
+     "visual": "chubby young man on the phone, voice suddenly very calm",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Tu ferais ça ? Tu tomberais avec moi, David. T'as signé des papiers aussi."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man looking at his reflection in the car window",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il a raison. Je suis complice. Je ne peux rien dire sans tomber."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "phone receiving a news article notification, dark car",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Quelques jours plus tard, un message d'Arben."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "middle-aged man with mustache on a video call, very scared, dark room",
+     "chars": [
+      "arben"
+     ],
+     "lines": [
+      {
+       "s": "arben",
+       "t": "Monsieur David… un homme qui parlait de l'usine aux journalistes… il est mort."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "rainy mountain road at night with a crashed car and flashing lights",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un accident de voiture, sur une route de montagne. Les circonstances restent floues."
+      }
+     ],
+     "move": "pan_down",
+     "banner": {
+      "label": "info",
+      "title": "Accident mortel",
+      "subtitle": "Albanie",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "young man frozen in his car, hand over mouth",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je pense au Fantôme. À sa phrase. Ne jamais le doubler."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "young man checking the street through the window blinds at home",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je vérifie les fenêtres. Je regarde chaque voiture qui passe."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young woman holding the baby, worried, in the living room",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "David, tu me fais peur. Qu'est-ce qui se passe ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man hugging the girlfriend and baby tightly",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Rien. Il ne se passe rien. Ce sera mon dernier mensonge."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "title": "Le journaliste",
+   "teaser": "L'article qui fait tout exploser.",
+   "scenes": [
+    {
+     "visual": "newsroom of a big newspaper with journalists at desks, screens",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Pendant ce temps, à New York, un journaliste enquête."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "localisation",
+      "title": "New York",
+      "subtitle": "Salle de rédaction",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "journalist woman with glasses looking at photos of cardboard boxes and cartridges",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il a reçu des photos. Des cartons. Des vieilles cartouches. Une usine en Albanie."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "journalist on the phone taking notes quickly",
+     "chars": [],
+     "lines": [
+      {
+       "s": "journaliste",
+       "t": "Vous me confirmez que les munitions sont chinoises ? Et qu'elles ont plus de quarante ans ?"
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "pinboard with photos and red strings connecting Albania, Miami and Afghanistan",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il remonte le fil. Albanie. Miami. Afghanistan. Une petite société : AEY."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "chubby young man in the office receiving a phone call, annoyed",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Un journaliste ? Dis-lui qu'on n'a rien à dire."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "printing press rolling out newspapers fast",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mars 2008. L'article sort à la une."
+      }
+     ],
+     "move": "run"
+    },
+    {
+     "visual": "newspaper front page with a big headline about ammunition scandal",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deux gamins de Miami. Trois cents millions. Des munitions chinoises interdites."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "scandale",
+      "title": "À la une",
+      "subtitle": "Mars 2008",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "TV news studio showing a report with AEY logo on screen",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "En quelques heures, toutes les télés en parlent."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "politicians in a hearing room looking furious",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "À Washington, les politiques sont furieux."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "young man reading the newspaper in a coffee shop, shocked",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je lis l'article dans un café. Mon nom n'y est pas. Pas encore."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man throwing a newspaper across the office",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Ils vont rien prouver ! Rien du tout !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "official letter on a desk with the words CONTRACT SUSPENDED in red",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le lendemain, l'armée suspend tous les contrats d'AEY."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "armée",
+      "title": "Contrats suspendus",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "empty Miami office with phones ringing and nobody answering",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les téléphones sonnent dans le vide. L'empire s'écroule."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "title": "Le FBI",
+   "teaser": "On frappe à la porte.",
+   "scenes": [
+    {
+     "visual": "dark Miami office at night, chubby young man shredding documents frantically",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim passe ses nuits à détruire des documents."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "chubby young man on the phone yelling, papers flying",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "Effacez tout ! Les emails, les factures, tout !"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "old bald man in a beige suit sitting alone in a dark room, worried",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ralph ne répond plus au téléphone."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man at home playing with his baby daughter on the floor",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Moi, j'essaie de vivre normalement. Je joue avec ma fille."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "sunrise over a quiet Miami street with black cars arriving",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un matin, à six heures, trois voitures noires s'arrêtent devant chez moi."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "front door of an apartment with heavy knocking, POV from inside",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "On frappe. Fort."
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "FBI agents with jackets standing at the open door, serious",
+     "chars": [],
+     "lines": [
+      {
+       "s": "agent",
+       "t": "David Packouz ? FBI. Nous avons un mandat."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "alerte",
+      "title": "FBI",
+      "subtitle": "Perquisition",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young woman holding the crying baby in the hallway, scared",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "David ? David, qu'est-ce qui se passe ?!"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "FBI agents carrying boxes and a computer out of the apartment",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ils prennent mon ordinateur, mes papiers, mon téléphone."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "agent sitting at the kitchen table across from the young man",
+     "chars": [],
+     "lines": [
+      {
+       "s": "agent",
+       "t": "Votre associé est en train de couler. Vous voulez couler avec lui ?"
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man looking at his daughter in her mother's arms",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je regarde ma fille. Je pense à tout ce que j'ai fait."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man nodding slowly, hands on the table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Je vais tout vous dire. Depuis le début."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "agent pressing record on a small recorder on the table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et pour la première fois depuis deux ans, je dis toute la vérité."
+      }
+     ],
+     "move": "zoom_in"
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "title": "L'arrestation",
+   "teaser": "Efraim tente de s'en sortir.",
+   "scenes": [
+    {
+     "visual": "Miami office building surrounded by police cars with flashing lights",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Juin 2008. Le FBI débarque aussi chez AEY."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "info",
+      "title": "Juin 2008",
+      "subtitle": "Inculpation fédérale",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "chubby young man in sunglasses being escorted by agents, arms behind back",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim sort menotté. Ses lunettes de soleil toujours sur le nez."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "chubby young man shouting at reporters while walking to a car",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "C'est un malentendu ! Je suis un patriote ! J'ai armé l'Amérique !"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "reporters with cameras flashing on a sidewalk",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les flashs crépitent. Il a vingt-deux ans."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "courthouse exterior with stone columns and american flags",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les accusations tombent. Fraude. Complot. Fausses déclarations."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "young man sitting in a waiting room of the courthouse in a suit",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Moi aussi, je suis inculpé. Avec Efraim. Avec Ralph."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "old bald man in a beige suit walking into the courthouse, head down",
+     "chars": [
+      "ralph"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ralph, l'investisseur, est rattrapé lui aussi."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "courthouse corridor, chubby young man passing by with his lawyer",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Dans le couloir, je croise Efraim."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man glaring, close-up, courthouse corridor",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "T'as parlé, hein ? T'as tout balancé."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "POV looking at Efraim, calm",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "J'ai dit la vérité. Tu devrais essayer, pour une fois."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man walking away without answering, lawyer following",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il ne répond pas. Il s'éloigne."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man alone at a courthouse window looking at the sky",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deux ans plus tôt, on était deux gamins avec un rêve stupide."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "courtroom doors closing with a heavy sound",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Maintenant, c'est un juge qui va décider de notre avenir."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "à venir",
+      "title": "Le procès",
+      "subtitle": "",
+      "color": "black"
+     }
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "title": "Le procès",
+   "teaser": "Le verdict tombe.",
+   "scenes": [
+    {
+     "visual": "grand courtroom with wooden benches, judge's bench, american flag",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le tribunal fédéral de Miami. Salle pleine."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "tribunal",
+      "title": "Miami",
+      "subtitle": "Tribunal fédéral",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "prosecutor in a suit pointing at a screen showing photos of cardboard boxes",
+     "chars": [],
+     "lines": [
+      {
+       "s": "agent",
+       "t": "Ces jeunes hommes ont menti à l'armée des États-Unis pour des millions."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "screen in the courtroom showing old Chinese crates and new cardboard boxes side by side",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les photos de l'usine défilent. Les caisses chinoises. Les cartons."
+      }
+     ],
+     "move": "pan_down"
+    },
+    {
+     "visual": "young man sitting at the defense table, looking down",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je sens tous les regards sur moi."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "chubby young man at the defense table in a suit, no sunglasses, nervous",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim n'a plus ses lunettes. Il a l'air tout petit, d'un coup."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man standing up in court, lawyer whispering to him",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il finit par plaider coupable. Plus d'échappatoire."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "aveu",
+      "title": "Coupable",
+      "subtitle": "",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "old judge with glasses at the bench, serious, holding papers",
+     "chars": [],
+     "lines": [
+      {
+       "s": "juge",
+       "t": "Monsieur Diveroli. Quatre ans de prison fédérale."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man closing his eyes, defeated",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Quatre ans. Le roi de Miami va dormir derrière des barreaux."
+      }
+     ],
+     "move": "static",
+     "banner": {
+      "label": "verdict",
+      "title": "4 ans de prison",
+      "subtitle": "Efraim Diveroli",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "judge looking at the young man over his glasses",
+     "chars": [],
+     "lines": [
+      {
+       "s": "juge",
+       "t": "Monsieur Packouz. Vous avez coopéré. Sept mois d'assignation à résidence."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man exhaling with relief, hands over his face",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sept mois chez moi. Avec un bracelet. Je respire."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "verdict",
+      "title": "7 mois",
+      "subtitle": "Assignation à résidence",
+      "color": "purple"
+     }
+    },
+    {
+     "visual": "young woman in the audience holding the toddler, crying with relief",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "C'est fini… c'est vraiment fini."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "agents escorting the chubby young man out of the courtroom",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim est emmené. Il ne me regarde pas."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young man alone in the empty courtroom, light from windows",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La salle se vide. Je reste assis. Libre… ou presque."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "title": "Le bracelet",
+   "teaser": "Une visite inattendue.",
+   "scenes": [
+    {
+     "visual": "close-up of an electronic ankle monitor on a leg, apartment floor",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un bracelet électronique à la cheville. Je ne peux pas sortir."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "small apartment living room with toys on the floor, sunny",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Sept mois dans un petit appartement. Mais avec ma fille."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young man teaching a toddler to walk in the living room",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Je la vois faire ses premiers pas. Je ne rate plus rien."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young woman and young man cooking together, laughing",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu sais quoi ? Je préfère ce David-là. Celui qui reste."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man looking at the ocean through the window, nostalgic",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Parfois, je repense à l'argent. Aux voitures. Au désert."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "doorbell ringing, POV approaching the front door",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un jour, on sonne. Je n'attends personne."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "tall thin older man in a long black coat at the doorway, holding an envelope",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le Fantôme. Devant ma porte."
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "alerte",
+      "title": "Visite",
+      "subtitle": "Inattendue",
+      "color": "red"
+     }
+    },
+    {
+     "visual": "young man frozen at the door, hand on the frame",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Qu'est-ce que vous voulez ?"
+      }
+     ],
+     "move": "shake"
+    },
+    {
+     "visual": "tall thin older man smiling coldly, close-up",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Te dire une chose. Ton ami a perdu parce qu'il était avide. Toi, tu étais juste naïf."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "tall thin older man handing a thick envelope",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "klaus",
+       "t": "Prends. Pour ta fille. Et oublie mon visage."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young man looking at the envelope in his hands, hesitating",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "J'hésite. Longtemps."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "POV cartoon hands giving the envelope back",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Non. J'ai fini avec tout ça."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "tall thin older man walking away down the corridor, disappearing",
+     "chars": [
+      "klaus"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il hausse les épaules. Et disparaît. Je ne l'ai jamais revu."
+      }
+     ],
+     "move": "zoom_out"
+    }
+   ],
+   "pinned": "Toi, tu aurais pris l'enveloppe ? 💰"
+  },
+  {
+   "n": 29,
+   "title": "Les questions",
+   "teaser": "Ce que personne ne t'a dit.",
+   "scenes": [
+    {
+     "visual": "young man sitting on a balcony at night with a notebook, thoughtful",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Pendant ces sept mois, je me pose une question. Une seule."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "illustration of the Pentagon building with a giant question mark",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Comment deux gamins sans expérience ont pu décrocher trois cents millions ?"
+      }
+     ],
+     "move": "push",
+     "banner": {
+      "label": "question",
+      "title": "Comment ?",
+      "subtitle": "",
+      "color": "orange"
+     }
+    },
+    {
+     "visual": "government website on a screen with automated contract approvals",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La réponse : le système voulait le prix le plus bas. Point."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "giant stack of paper contracts with a tiny stamp APPROVED",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Personne n'a vérifié qui on était. Ni d'où venaient les munitions."
+      }
+     ],
+     "move": "pan_up"
+    },
+    {
+     "visual": "crowded government office with workers overwhelmed by paperwork",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "La guerre allait si vite que les contrôles ne suivaient plus."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "Afghan soldiers at a training camp holding rifles, mountains behind",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Et au bout de la chaîne, des soldats afghans qui comptaient sur ces cartouches."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man looking down guiltily, balcony at night",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Ça, c'est la partie qui m'empêche encore de dormir."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "politicians in a congressional hearing with microphones",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Après le scandale, le Congrès ouvre une enquête."
+      }
+     ],
+     "move": "pan_down",
+     "banner": {
+      "label": "Washington",
+      "title": "Enquête du Congrès",
+      "subtitle": "",
+      "color": "blue"
+     }
+    },
+    {
+     "visual": "official document with new rules and checkmarks",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Les règles des appels d'offres sont durcies."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man writing in a notebook at the kitchen table",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Moi, j'écris tout. Pour comprendre. Pour me souvenir."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "young woman putting a hand on his shoulder, kitchen at night",
+     "chars": [
+      "lea"
+     ],
+     "lines": [
+      {
+       "s": "lea",
+       "t": "Tu devrais raconter ton histoire. Pour que d'autres ne fassent pas pareil."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man smiling slightly for the first time in a long while",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Elle a raison. Comme toujours."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "phone ringing with an unknown number, journalist calling",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Un an plus tard, un journaliste m'appelle. Il veut tout savoir."
+      }
+     ],
+     "move": "zoom_in"
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "title": "La fin des War Dogs",
+   "teaser": "Fin de la série.",
+   "scenes": [
+    {
+     "visual": "young man without ankle monitor walking out on a sunny Miami street, free",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Le bracelet est enlevé. Je suis libre."
+      }
+     ],
+     "move": "walk",
+     "banner": {
+      "label": "liberté",
+      "title": "Fin de peine",
+      "subtitle": "",
+      "color": "green"
+     }
+    },
+    {
+     "visual": "magazine on a newsstand with a cover about young arms dealers",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Mon histoire sort dans un grand magazine. Puis elle inspire un film."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "young man looking at a movie theater marquee from the street, amazed",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Des acteurs jouent ma vie. C'est complètement fou."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "chubby young man in an orange prison uniform looking out a barred window",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Efraim, lui, fait ses années de prison. Et il ne voit pas les choses comme moi."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "chubby young man in prison writing a letter, angry face",
+     "chars": [
+      "efraim"
+     ],
+     "lines": [
+      {
+       "s": "efraim",
+       "t": "C'est moi qui ai tout construit. Lui, il a juste raconté."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "two old photos of two kids playing together, nostalgic warm light",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Deux amis d'enfance. Une amitié détruite par l'argent."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "young man walking on the beach with a little girl holding his hand at sunset",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Aujourd'hui, ce que je garde, c'est elle."
+      }
+     ],
+     "move": "walk"
+    },
+    {
+     "visual": "young man sitting on the sand, looking at the viewer, sunset",
+     "chars": [],
+     "lines": [
+      {
+       "s": "david",
+       "t": "Si tu dois retenir une chose : l'argent rapide coûte toujours plus cher qu'il rapporte."
+      }
+     ],
+     "move": "zoom_in"
+    },
+    {
+     "visual": "the old massage room, empty, sunlight through the window",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Parfois, je repense au masseur fauché. À ce qu'il aurait dû faire."
+      }
+     ],
+     "move": "static"
+    },
+    {
+     "visual": "POV cartoon hands open toward the sunset over the ocean",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Il aurait dû dire non. Dès le premier jour."
+      }
+     ],
+     "move": "push"
+    },
+    {
+     "visual": "black screen with bold text style title card",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "War Dogs. Une histoire vraie. Deux gamins, trois cents millions, et une chute."
+      }
+     ],
+     "move": "static",
+     "banner": {
+      "label": "fin",
+      "title": "War Dogs",
+      "subtitle": "Une histoire vraie",
+      "color": "black"
+     }
+    },
+    {
+     "visual": "young man waving goodbye on the beach, smiling",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Merci d'avoir suivi mon histoire jusqu'au bout."
+      }
+     ],
+     "move": "zoom_out"
+    },
+    {
+     "visual": "sunset over Miami beach with palm trees, peaceful",
+     "chars": [],
+     "lines": [
+      {
+       "s": "narrateur",
+       "t": "Dis-moi en commentaire quelle partie t'a le plus choqué."
+      }
+     ],
+     "move": "pan_up"
+    }
+   ],
+   "pinned": "Quelle partie t'a le plus choqué ? 😳👇"
+  }
+ ]
+}

@@ -74,7 +74,7 @@ class ViralAgent:
             p = visuals.build_prompt(scenes[i].get("visual") or scenes[i]["text"], style)
             return visuals.generate_image(cfg, p, work / "parts" / f"img_{i:02d}.jpg", seed + i, session=session)
         self.log(f"🎨 Génération de {len(scenes)} images (style {style})…")
-        pool = ThreadPoolExecutor(max_workers=2)
+        pool = ThreadPoolExecutor(max_workers=2 if cfg.image_token else 1)
         img_futures = [pool.submit(gen, i) for i in range(len(scenes))]
 
         # Voix scène par scène -> timings exacts

@@ -33,6 +33,10 @@ VISUAL_STYLES = {
     "3d": "3d render, pixar style, soft global illumination, colorful, cute, octane render",
     "comic": "bold comic book illustration, thick ink lines, halftone, dynamic angle, saturated colors",
     "minimal": "minimalist flat illustration, clean shapes, pastel palette, centered subject",
+    "pov_cartoon": ("stylized 3D cartoon animation still, first-person point of view, simple toy-like characters "
+                    "with round heads, big round white cartoon eyes with black pupils, thin wooden stick arms and "
+                    "legs, puffy short sleeves, bold dark outlines, cel shading, bright saturated colors, soft "
+                    "pastel sky with fluffy pink-white clouds, warm sunny light, wide angle lens"),
 }
 
 VOICES = {

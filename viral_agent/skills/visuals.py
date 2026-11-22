@@ -8,16 +8,17 @@ from PIL import Image, ImageDraw, ImageFilter
 
 from .playbook import VISUAL_STYLES
 
-NEGATIVE = "no text, no watermark, no letters, no logo"
+NEGATIVE = "fully clothed characters, family friendly, no text, no watermark, no letters, no logo"
 
 
 def build_prompt(visual, style="cinematic", subject_hint=""):
+    """Le style passe en premier : les modèles d'image donnent plus de poids au début du prompt."""
     style_txt = VISUAL_STYLES.get(style, style)
     hint = f", {subject_hint}" if subject_hint else ""
-    return f"{visual}{hint}, {style_txt}, vertical composition, {NEGATIVE}"
+    return f"{style_txt}. {visual}{hint}. Vertical composition, {NEGATIVE}"
 
 
-def generate_image(cfg, prompt, out_path, seed=None, retries=5, session=None):
+def generate_image(cfg, prompt, out_path, seed=None, retries=8, session=None):
     s = session or requests.Session()
     if cfg.ca_bundle:
         s.verify = cfg.ca_bundle
@@ -29,6 +30,17 @@ def generate_image(cfg, prompt, out_path, seed=None, retries=5, session=None):
         try:
             headers = {"Authorization": f"Bearer {cfg.image_token}"} if cfg.image_token else {}
             r = s.get(url, params=params, headers=headers, timeout=180)
+            if r.status_code in (402, 429):  # quota gratuit : 1 image / 45 s par IP sans clé
+                wait = 47
+                try:
+                    msg = r.json().get("error", {}).get("message", "")
+                    import re as _re
+                    m = _re.search(r"(\d+)\s*s", msg)
+                    wait = int(m.group(1)) + 2 if m else wait
+                except Exception:
+                    pass
+                time.sleep(wait)
+                continue
             if r.ok and r.headers.get("content-type", "").startswith("image"):
                 with open(out_path, "wb") as f:
                     f.write(r.content)

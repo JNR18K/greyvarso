@@ -12,6 +12,7 @@ def run(cmd):
 
 
 MOVES = ["zoom_in", "zoom_out", "pan_up", "pan_down", "zoom_in_left", "zoom_in_right"]
+SPECIAL_MOVES = ["walk", "run", "shake", "push", "static"]
 
 
 def _zoompan(move, frames, w, h):
@@ -26,12 +27,19 @@ def _zoompan(move, frames, w, h):
         "pan_down": ("1.15", cx, f"(ih-ih/zoom)*on/{d}"),
         "zoom_in_left": (z_in, f"(iw-iw/zoom)*0.2", cy),
         "zoom_in_right": (z_in, f"(iw-iw/zoom)*0.8", cy),
+        # POV : balancement de marche / course, tremblement, poussée dramatique
+        "walk": ("1.14", f"{cx}+sin(on*2*PI/16)*10", f"{cy}+abs(sin(on*2*PI/16))*-22+11"),
+        "run": (f"1.16+0.04*on/{d}", f"{cx}+sin(on*2*PI/9)*16", f"{cy}+abs(sin(on*2*PI/9))*-38+19"),
+        "shake": ("1.15", f"{cx}+sin(on*1.9)*14+sin(on*4.3)*7", f"{cy}+cos(on*2.3)*12+sin(on*5.1)*6"),
+        "push": (f"min(1+0.35*on/{d},1.35)", cx, cy),
+        "static": ("1.04", cx, cy),
     }
     z, x, y = exprs[move]
     return f"zoompan=z='{z}':x='{x}':y='{y}':d={d}:s={w}x{h}:fps=30"
 
 
-def render_scene(image, duration, out_path, move, w=1080, h=1920, fps=30, flash=True):
+def render_scene(image, duration, out_path, move, w=1080, h=1920, fps=30, flash=True, overlays=()):
+    """overlays : [(png, x, y, mode)] ; mode 'slide' = descend du haut, 'static' = fixe."""
     frames = max(int(round(duration * fps)), 1)
     vf = ("crop=iw:ih*0.93:0:0,"  # retire le filigrane éventuel en bas de l'image
           f"scale={w*2}:{h*2}:force_original_aspect_ratio=increase,crop={w*2}:{h*2},"
@@ -40,8 +48,14 @@ def render_scene(image, duration, out_path, move, w=1080, h=1920, fps=30, flash=
           "vignette=PI/5")
     if flash:  # flash blanc de 3 images = pattern interrupt
         vf += ",fade=t=in:st=0:d=0.12:color=white"
-    vf += ",format=yuv420p"
-    run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(image), "-vf", vf,
+    inputs = ["-loop", "1", "-i", str(image)]
+    graph = f"[0:v]{vf}[b0]"
+    for k, (png, x, y, mode) in enumerate(overlays or []):
+        inputs += ["-loop", "1", "-i", str(png)]
+        ys = f"if(lt(t,0.25),-h+(t/0.25)*({y}+h),{y})" if mode == "slide" else str(y)
+        graph += f";[b{k}][{k+1}:v]overlay=x={x}:y='{ys}':shortest=1[b{k+1}]"
+    graph += f";[b{len(overlays or [])}]format=yuv420p[out]"
+    run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", graph, "-map", "[out]",
          "-frames:v", str(frames), "-r", str(fps), "-c:v", "libx264", "-preset", "veryfast",
          "-crf", "20", str(out_path)])
     return out_path
@@ -60,7 +74,8 @@ def assemble(scene_clips, voice_audio, ass_file, out_path, total, music=None, mu
     lst = Path(out_path).with_name("clips.txt")
     lst.write_text("".join(f"file '{Path(c).resolve()}'\n" for c in scene_clips))
     ass = str(Path(ass_file).resolve()).replace("\\", "/").replace(":", r"\:").replace("'", r"\'")
-    vchain = f"[0:v]subtitles='{ass}'"
+    fonts = str(Path(__file__).resolve().parent.parent / "assets" / "fonts").replace(":", r"\:")
+    vchain = f"[0:v]subtitles='{ass}':fontsdir='{fonts}'"
     if progress_bar:
         vchain += (f",drawbox=x=0:y=0:w=iw:h=14:color=black@0.35:t=fill"
                    f",drawbox=x=0:y=0:w='iw*t/{total:.3f}':h=14:color=0xFFD000@0.95:t=fill")

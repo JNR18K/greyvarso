@@ -76,9 +76,17 @@ def main(argv=None):
     vx = vs.add_parser("delete", help="supprimer une voix"); vx.add_argument("name")
     vb = vs.add_parser("catalog", help="voix de base Edge d'une langue"); vb.add_argument("--lang", default="fr")
 
+    se = sub.add_parser("series", help="produire une série d'épisodes depuis une bible JSON")
+    se.add_argument("bible", help="fichier JSON de la série (voir series/wardogs.json)")
+    se.add_argument("--episodes", default="all", help="ex. 1, 1-5, 3,7,9 ou all")
+    se.add_argument("--out", default="output")
+    se.add_argument("--skip-done", action="store_true", help="ne refait pas les épisodes déjà rendus")
+
     args = p.parse_args(argv)
     if args.cmd == "voice":
         return voice_cmd(args)
+    if args.cmd == "series":
+        return series_cmd(args)
     agent = ViralAgent(Config())
 
     if args.cmd == "ideas":
@@ -118,6 +126,27 @@ def _show(pf):
         print(f"   effets : {', '.join(pf['effects'])}")
     if pf.get("why"):
         print(f"   pourquoi : {pf['why']}")
+
+
+def series_cmd(args):
+    from pathlib import Path
+    from .skills import series
+    cfg = Config()
+    bible = series.load_bible(args.bible)
+    eps = series.parse_range(args.episodes, len(bible["episodes"]))
+    done, failed = [], []
+    for n in eps:
+        target = Path(args.out) / f"{bible['series'].get('slug', 'serie')}-partie-{n:02d}" / "video.mp4"
+        if args.skip_done and target.exists():
+            print(f"⏭️  Partie {n} déjà rendue")
+            continue
+        try:
+            done.append(series.render_episode(cfg, bible, n, args.out))
+        except Exception as e:
+            print(f"❌ Partie {n} : {e}")
+            failed.append(n)
+    print(f"\nTerminé : {len(done)} épisode(s) rendus" + (f", échecs : {failed}" if failed else ""))
+    return 1 if failed else 0
 
 
 def voice_cmd(args):

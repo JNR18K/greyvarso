@@ -106,6 +106,32 @@ python -m viral_agent make "ton sujet" --voice-profile moi
   Cloner une célébrité ou une personne réelle sans accord est illégal dans beaucoup de pays et fait bannir les comptes.
   Chatterbox ajoute aussi un watermark inaudible à l'audio généré.
 
+## 📺 Séries (ex. 30 TikToks d'une minute)
+
+Le mode série produit des épisodes au **style POV** : vue à la première personne avec les mains en bas de l'écran,
+personnages cartoon 3D, bandeaux d'alerte qui glissent du haut, sous-titres arrondis colorés par personnage,
+plusieurs voix, pastille « PARTIE 3/30 » et carte « À SUIVRE » automatique à la fin.
+
+```bash
+python -m viral_agent series series/wardogs.json --episodes 1-30 --skip-done
+python -m viral_agent series series/wardogs.json --episodes 5        # un seul épisode
+```
+
+Tout est décrit dans une « bible » JSON (`series/wardogs.json`, générée depuis `series/source/`) :
+- `voices` : une voix par personnage (Edge TTS ou profil du labo de voix via `"profile": "moi"`) et la couleur de ses sous-titres.
+- `characters` : la description visuelle fixe de chaque personnage, ajoutée à chaque image où il apparaît.
+- `episodes[].scenes[]` : `visual` (description de l'image), `chars`, `move` (`walk`, `run`, `shake`, `push`,
+  `zoom_in`…), `banner` (`label`, `title`, `subtitle`, `color` : red, blue, green, black, orange ou purple),
+  et `lines` (`{"s": "efraim", "t": "texte"}`).
+
+Pour mettre **ta propre voix** sur le narrateur, clone-la (voir plus haut) puis remplace l'entrée `narrateur`
+par `{"profile": "moi", "color": "#FFFFFF"}`.
+
+> **Images.** Sans clé, Pollinations limite à 1 image toutes les 45 s, avec un modèle basique : compte environ
+> 10 min par épisode et un style approximatif. Avec une clé gratuite (https://enter.pollinations.ai), mets
+> `export POLLINATIONS_TOKEN=...`. Le rendu devient plus rapide, les images sont générées en parallèle et le modèle
+> Flux est bien meilleur pour le style POV cartoon.
+
 ## Variables d'environnement
 
 | Variable | Défaut | |
