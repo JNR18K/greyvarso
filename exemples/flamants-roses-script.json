@@ -1,0 +1,78 @@
+{
+  "title": "Tu crois que le soleil colore les flamants?!",
+  "format": "Mythe vs Réalité",
+  "scenes": [
+    {
+      "text": "Tu crois que le soleil colore les flamants? Faux!",
+      "visual": "Close‑up of a pink flamingo standing in a shallow pond, sun sparkling on water",
+      "emphasis": "faux"
+    },
+    {
+      "text": "En 30 secondes, on révèle le secret éclairant.",
+      "visual": "Animated flash of seconds counting down over the flamingo",
+      "emphasis": "secret"
+    },
+    {
+      "text": "Ce n’est pas le soleil qui les peint.",
+      "visual": "Sun ray fades into a bright teal background with no flamingo",
+      "emphasis": "soleil"
+    },
+    {
+      "text": "C’est la nourriture : algues riches en beta‑carotène.",
+      "visual": "Animated algae particles swirling into a bowl, bright orange light",
+      "emphasis": "beta‑carotène"
+    },
+    {
+      "text": "Les pigments s’assemblent dans la plume et picotent d’une couleur rose.",
+      "visual": "Microscope view of feather fibers absorbing orange pigment, turning pink",
+      "emphasis": "plume"
+    },
+    {
+      "text": "Chaque mâche de mousse marine transmet le même vert‑orange à chaque plume.",
+      "visual": "Flamingo pecking at algae, close‑up of bill touching bright green algae",
+      "emphasis": "mâche"
+    },
+    {
+      "text": "Alors, la prochaine fois que tu verras un flamant, pense à son petit dîner marin.",
+      "visual": "Feathers gleaming, water rippling, sky turning dusk, a flamingo glides",
+      "emphasis": "dîner"
+    },
+    {
+      "text": "Tape \"Secret\" pour la partie 2, et boucle ton regard vers le premier flamme.",
+      "visual": "Flamingo spins, camera zooms out to reveal sunrise, loop back to opening shot",
+      "emphasis": "Secret"
+    }
+  ],
+  "cta": "Tape \"Secret\" pour la partie 2",
+  "_critique": {
+    "scores": {
+      "hook": 8,
+      "retention": 7,
+      "emotion": 6,
+      "clarity": 9,
+      "shareability": 8,
+      "loop": 8,
+      "accuracy": 10
+    },
+    "overall": 8.0,
+    "dubious_claims": [],
+    "weaknesses": [
+      "Hook could be tighter, starting phrase is slightly long and generic.",
+      "Open loop phrase (“En 30 secondes…”) is not early enough; it appears after hook.",
+      "Visual description of “sunray fades into a bright teal background” may confuse viewers about the sun’s role.",
+      "The CTA is repeated in the last scene but not in an isolated, clear manner."
+    ],
+    "fixes": [
+      "Shorten hook to <12 words, e.g. \"Quel est le secret derrière le rose des flamants?\"",
+      "Insert an early open-loop line in the second frame: \"Attends le 3e élément, c’est choquant.\"",
+      "Simplify visual: keep the sun in the background and add a simple overlay of algae instead of changing background color.",
+      "Place CTA in a dedicated frame right before the loop, e.g. \"Tape \"Secret\" pour la partie 2. Reviens vite !\""
+    ],
+    "better_hooks": [
+      "Quel est le vrai secret derrière le rose des flamants?",
+      "Est-ce que le soleil fait réellement la couleur des flamants?",
+      "La couleur des flamants, c’est pas du soleil, c’est ce qu’ils mangent…"
+    ]
+  },
+  "_score": 8.0
+}
