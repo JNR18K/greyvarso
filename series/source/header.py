@@ -8,6 +8,8 @@ SERIES = {
   "pov_hint": "viewer's cartoon hands at the bottom",
   "disclaimer": "Dramatisation inspirée de l'histoire vraie d'AEY Inc. (2005-2008). Dialogues et certaines scènes imaginés.",
   "hashtags": ["#wardogs", "#histoirevraie", "#pov", "#serie", "#storytime", "#fyp", "#pourtoi"],
+  "say": {"Efraim": "Éfraïm", "Albanie": "Al-ba-nie"},
+  "voice_engine": "chatterbox",
   "voices": {
     "narrateur": {"voice": "fr-FR-RemyMultilingualNeural", "rate": "-2%", "color": "#FFFFFF"},
     "david":     {"voice": "fr-FR-RemyMultilingualNeural", "rate": "+0%", "color": "#8FD3FF"},

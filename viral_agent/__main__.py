@@ -176,7 +176,12 @@ def series_cmd(args):
             print(f"⏭️  Partie {n} déjà rendue")
             continue
         try:
-            done.append(series.render_episode(cfg, bible, n, args.out))
+            ep = next(e for e in bible["episodes"] if int(e["n"]) == n)
+            if all(s.get("anim") for s in ep["scenes"]):
+                from .skills import animator  # épisode avec plans 3D : animation 24 i/s
+                done.append(animator.render_episode(cfg, bible, n, args.out))
+            else:
+                done.append(series.render_episode(cfg, bible, n, args.out))
         except Exception as e:
             print(f"❌ Partie {n} : {e}")
             failed.append(n)
